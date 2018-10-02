@@ -31,58 +31,66 @@
               </li>
             </ul>
         </nav>
-        <section class="intro">
-          <img class="intro__image src="http://placehold.it/150x100">
-        </section>
+        <div class="intro">
+          <img class="intro__image" src="http://placehold.it/150x100">
+        </div>
       </header>
 
       <main class="page-main">
 
         <section class="gallery">
-          <h1 class="gallery__title">Фото и видео</h1>
+          <h1 class="gallery__title page-title">Фото и видео</h1>
           <p class="gallery__description">
             Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
           </p>
-          <figure class="gallery__list">
-            <img class="gallery__image" src="photo-1-mobile.jpg" alt="">
+          <div class="gallery__list">
+            <a href="#">
+              <img class="gallery__image" src="photo-1-mobile.jpg" alt="">
+            </a>
             <div class="gallery-item__footer">
               <div class="gallery-item__info">
                 <b class="gallery-item__caption">Неродные просторы</b>
                 <p class="gallery-item__author">Автор фото: Борис</p>
-                <button class="button gallery__button">1350</button>
               </div>
+              <button class="button gallery__button">1350</button>
             </div>
-          </figure>
-          <figure class="gallery__list">
-            <img class="gallery__image" src="photo-2-mobile.jpg" alt="">
+          </div>
+          <div class="gallery__list">
+            <a href="">
+              <img class="gallery__image" src="photo-2-mobile.jpg" alt="">
+            </a>
             <div class="gallery-item__footer">
               <div class="gallery-item__info">
                 <b class="gallery-item__caption">Местная растительность</b>
                 <p class="gallery-item__author">Автор фото: Сергей</p>
-                <button class="button gallery__button">143</button>
               </div>
+              <button class="button gallery__button">143</button>
             </div>
-          </figure>
-          <figure class="gallery__list">
-            <img class="gallery__image" src="photo-3-mobile.jpg" alt="">
+          </div>
+          <div class="gallery__list">
+            <a href="">
+              <img class="gallery__image" src="photo-3-mobile.jpg" alt="">
+            </a>
             <div class="gallery-item__footer">
               <div class="gallery-item__info">
                 <b class="gallery-item__caption">Дорога на север</b>
                 <p class="gallery-item__author">Автор фото: Петр</p>
-                <button class="button gallery__button">96</button>
               </div>
+              <button class="button gallery__button">96</button>
             </div>
-          </figure>
-          <figure class="gallery__list">
-            <img class="gallery__image" src="photo-4-mobile.jpg" alt="">
+          </div>
+          <div class="gallery__list">
+            <a href="">
+              <img class="gallery__image" src="photo-4-mobile.jpg" alt="">
+            </a>
             <div class="gallery-item__footer">
               <div class="gallery-item__info">
                 <b class="gallery-item__caption">Мост дьявола</b>
                 <p class="gallery-item__author">Автор фото: Антон</p>
-                <button class="button gallery__button">254</button>
               </div>
+              <button class="button gallery__button">96</button>
             </div>
-          </figure>
+          </div>
         </section>
 
         <section class="presentation">
@@ -101,9 +109,9 @@
                 <div class="range__toggle"></div>
               </div>
               <div class="video__controls option">
-                <div class="option__repeat"></div>
-                <div class="option__captions"></div>
-                <div class="option__fullscreen"></div>
+                <button class="option__repeat visually-hidden">Повтор</button>
+                <button class="option__captions visually-hidden">Субтитры</button>
+                <button class="option__fullscreen visually-hidden">На полный экран</button>
               </div>
             </div>
           </div>
@@ -111,7 +119,7 @@
       </main>
 
       <footer class="page-footer">
-          <a class="page-footer__hashtag" href="#">#VISITSEDONA</a>
+          <a class="page-footer__hashtag" href="#">#Visitsedona</a>
           <div class="page-footer__social social">
             <ul class="social__list">
               <li class="social__item">
