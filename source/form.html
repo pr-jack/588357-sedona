@@ -31,16 +31,17 @@
               </li>
             </ul>
         </nav>
-        <section class="intro">
-          <img class="intro__image src="http://placehold.it/150x100">
-        </section>
+
+        <div class="intro">
+          <img class="intro__image" src="http://placehold.it/150x100">
+        </div>
       </header>
 
       <main class="page-main">
 
         <section class="reviews">
-          <h1 class="reviews__title">Оставьте свой отзыв</h1>
-          <p class="reviews__description">
+          <h1 class="reviews__title page-title">Оставьте свой отзыв</h1>
+          <p class="reviews__description page__description">
             Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
           </p>
           <form class="reviews__form reviews-form" action="http://echo.htmlacademy.ru" method="post">
@@ -66,9 +67,9 @@
                 <ul class="reviews-form__list">
                   <li class="reviews-form__item">
                     <label class="reviews-form__label" for="user-phone">Контактный телефон*:</label>
-                    <input class="reviews-form__input" id="user-phone" type="tel" name="userphone" placeholder="Введите телефон" required>
+                    <input class="reviews-form__input" id="user-phone" type="tel" pattern="[0-9]{6, 11}" name="userphone" placeholder="Введите телефон" required>
                   </li>
-                  <li class="contacts__item">
+                  <li class="reviews-form__item">
                     <label class="reviews-form__label" for="user-email">Электронная почта*:</label>
                     <input class="reviews-form__input" id="user-email" type="email" name="useremail" placeholder="Введите e-mail" required>
                   </li>
@@ -81,11 +82,11 @@
                     <input class="reviews-form__input-radio" type="radio" name="impression" value="positive" id="positive" checked>
                     <label class="reviews-form__label" for="positive">Скорее положительное</label>
                   </li>
-                  <li class="impression__item">
+                  <li class="reviews-form__item">
                     <input class="reviews-form__input-radio" type="radio" name="impression" value="negative" id="negative">
                     <label class="reviews-form__label" for="negative">Скорее отрицательное</label>
                   </li>
-                  <li class="impression__item">
+                  <li class="reviews-form__item">
                     <input class="reviews-form__input-radio" type="radio" name="impression" value="undefined" id="undefined" checked>
                     <label class="reviews-form__label" for="undefined">Затрудняюсь ответить</label>
                   </li>
@@ -122,7 +123,7 @@
       </main>
 
       <footer class="page-footer">
-          <a class="page-footer__hashtag" href="#">#VISITSEDONA</a>
+          <a class="page-footer__hashtag" href="#">#Visitsedona</a>
           <div class="page-footer__social social">
             <ul class="social__list">
               <li class="social__item">
@@ -149,19 +150,19 @@
       </footer>
     </div>
 
-      <section class="modal-failure modal">
-        <h2 class="modal-failure__title">Что-то пошло не так!</2>
-        <p class="modal-failure__text">
+      <section class="modal modal--failure">
+        <h2 class="modal__title">Что-то пошло не так!</2>
+        <p class="modal__text">
           Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
         </p>
-        <button class="modal-failure__button button">ok</button>
+        <button class="modal__button button">ok</button>
       </section>
-      <section class="modal-success modal">
-        <h2 class="modal-success__title">Ваш отзыв отправлен!</2>
-        <p class="modal-success__text">
+      <section class="modal modal--success">
+        <h2 class="modal__title">Ваш отзыв отправлен!</2>
+        <p class="modal__text">
           Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.
         </p>
-        <button class="modal-success__button button">ok</button>
+        <button class="modal__button button">ok</button>
       </section>
   </body>
 </html>
