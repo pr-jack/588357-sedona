@@ -1,0 +1,22 @@
+@mixin center  {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@mixin list  {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  a  {
+    text-decoration: none;
+  }
+}
+
+@mixin font-title  {
+  font-family: 'PTSans_bold', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+}

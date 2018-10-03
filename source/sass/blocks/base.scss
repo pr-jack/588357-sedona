@@ -1,0 +1,21 @@
+html  {
+
+}
+
+body  {
+  margin: 0;
+  font-family: $font-primary;
+  font-size: $font-size;
+  line-height: $line-height;
+  text-transform: uppercase;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.visually-hidden  {
+  display: none;
+}
+
+.button  {
+  text-decoration: none;
+}

@@ -1,0 +1,19 @@
+.main-nav  {
+  width: 320px;
+  padding-bottom: 20px;
+  font-family: 'PTSans_bold', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 40px;
+  background: #81b3d2;
+}
+
+.main-nav__list  {
+  @include center;
+  @include list;
+
+}
+
+.main-nav__list a  {
+  margin: 20px 0;
+  color: #ffffff;
+}

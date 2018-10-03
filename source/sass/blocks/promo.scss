@@ -1,0 +1,15 @@
+.promo  {
+  height: 222px;
+  border: 2px solid #000000;
+  @include center;
+}
+
+.promo__title  {
+  font-family: 'PTSans_bold', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.promo__text  {
+  line-height: 26px;
+}

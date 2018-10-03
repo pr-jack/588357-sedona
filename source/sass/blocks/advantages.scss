@@ -1,0 +1,33 @@
+.advantages  {
+  @include center;
+  border: 2px solid #000000;
+}
+
+.advantages__list  {
+  @include list;
+}
+
+.advantages__item  {
+  @include center;
+}
+
+.advantages__item--blue  {
+  height: 192px;
+  color: #ffffff;
+  background: $background;
+}
+
+.advantages__title  {
+  @include font-title;
+}
+
+.advantages__item--gray  {
+  height: 168px;
+  background: #eeeeee;
+}
+
+.advantages__item--house,
+.advantages__item--souvenirs,
+.advantages__item--food  {
+  height: 120px;
+}
