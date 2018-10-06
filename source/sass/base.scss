@@ -1,0 +1,33 @@
+body {
+  width: 320px;
+  margin: 0;
+  font-family: $font-primary;
+  font-size: $font-size;
+  line-height: $line-height;
+  text-transform: uppercase;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.button {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: top;
+  border: none;
+  cursor: pointer;
+}

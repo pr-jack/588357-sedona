@@ -1,29 +1,28 @@
-.search  {
-  border: 2px solid #000000;
+.search {
   @include center;
+  border: $border;
   padding-bottom: 50px;
-  text-transform: uppercase;
 }
 
-.search__title  {
+.search__title {
+  @include font-title;
   margin: 0;
   padding: 30px 0;
-  @include font-title;
   font-size: 21px;
 }
 
-.search__description  {
+.search__description {
   margin: 0;
   padding-bottom: 40px;
   line-height: 21px;
+  color: $text-color_2;
 }
 
-.search__button  {
+.search__button {
+  @include font-title;
   width: 280px;
   padding: 16px 0;
-  @include font-title;
   font-size: 21px;
-  text-transform: uppercase;
-  background: $background;
+  background: $primary-color;
   color: #ffffff;
 }

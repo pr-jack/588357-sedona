@@ -1,34 +1,43 @@
-.advantages  {
+.advantages {
   @include center;
-  text-transform: uppercase;
-  border: 2px solid #000000;
+  border: $border;
 }
 
-.advantages__list  {
+.advantages__list {
   @include list;
 }
 
-.advantages__item  {
+.advantages__item {
   @include center;
+
+  &--blue {
+    padding: 40px 0;
+    color: #ffffff;
+    background: $primary-color;
+  }
+
+  &--gray {
+    padding: 30px 0;
+    background: $secondary-color;
+  }
+
+  &--house,
+  &--souvenirs,
+  &--food {
+    padding: 30px 0;
+  }
 }
 
-.advantages__item--blue  {
-  height: 192px;
-  color: #ffffff;
-  background: $background;
-}
-
-.advantages__title  {
+.advantages__title {
   @include font-title;
+  margin: 0;
+  padding-bottom: 50px;
 }
 
-.advantages__item--gray  {
-  height: 168px;
-  background: #eeeeee;
-}
+.advantages__description {
+  margin: 0;
 
-.advantages__item--house,
-.advantages__item--souvenirs,
-.advantages__item--food  {
-  height: 120px;
+  &--gray {
+    color: $text-color_2;
+  }
 }

@@ -1,14 +1,13 @@
-.presentation  {
+.presentation {
   border: 2px solid #000000;
-  text-transform: uppercase;
 }
 
-.presentation__title  {
+.presentation__title {
   @include font-title;
   margin: 35px 0;
 }
 
-.presentation__description  {
+.presentation__description {
   margin-left: 0;
   margin-bottom: 45px;
   line-height: 24px;

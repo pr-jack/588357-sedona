@@ -1,31 +1,30 @@
-.modal  {
+.modal {
   @include center;
-  width: 320px;
+  width: 100%;
   padding-bottom: 35px;
-  border: 2px solid #000000;
+  border: $border;
 }
 
-.modal__title  {
+.modal__title {
   @include font-title;
   margin-top: 60px;
   margin-bottom: 5px;
 }
 
-.modal__text  {
+.modal__text {
   margin: 30px 50px;
   line-height: 24px;
 }
 
-.modal__button  {
+.modal__button {
   @include font-title;
   width: 180px;
   padding: 16px 0;
   text-decoration: none;
-  text-transform: uppercase;
-  background: $background;
+  background: $primary-color;
   color: #ffffff;
 }
 
-.modal__button--success  {
+.modal__button--success {
   width: 280px;
 }

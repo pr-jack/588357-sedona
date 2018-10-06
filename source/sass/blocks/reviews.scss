@@ -1,68 +1,68 @@
-.reviews  {
+.reviews {
   padding-bottom: 50px;
-  border: 2px solid #000000;
+  border: $border;
 }
 
-.reviews__form  {
+.reviews__form {
   @include center;
 }
 
-.reviews-form__group  {
+.reviews-form__group {
   border: none;
   line-height: 26px;
 }
 
-.reviews-form__title  {
+.reviews-form__title {
   @include font-title;
   padding: 25px 0;
 }
 
-.reviews-form__list  {
+.reviews-form__list {
   @include list;
 }
 
 
-.reviews-form__item  {
+.reviews-form__item {
   padding-bottom: 20px;
 }
 
-.reviews-form__label  {
+.reviews-form__label {
   line-height: 26px;
-  text-transform: uppercase;
+  color: $text-color_2;
 }
 
-.reviews-form__input  {
-  height: 60px;
-  background: #f2f2f2;
+.reviews-form__input {
+  @include font-title;
+  padding: 18px 0;
+  background: $input-color-1;
   border: none;
+  color: #000000;
+  text-transform: none;
 }
 
-.reviews-form__title  {
-  text-transform: uppercase;
-}
-
-.reviews-form__label-radio  {
+.reviews-form__label-radio {
   @include font-title;
+  text-transform: none;
 }
 
-.reviews-form__label-checkbox  {
+.reviews-form__label-checkbox {
   @include font-title;
+  text-transform: none;
 }
 
-.reviews-form__textarea  {
+.reviews-form__textarea {
   @include font-title;
   color: #000000;
-  background: #f2f2f2;
+  background: $input-color-1;
 }
 
-.reviews-form__button  {
+.reviews-form__button {
+  @include font-title;
   margin-top: 50px;
   width: 280px;
   padding: 16px 0;
-  @include font-title;
   font-size: 21px;
   text-decoration: none;
-  text-transform: uppercase;
-  background: $background;
+  background: $primary-color;
   color: #ffffff;
 }
