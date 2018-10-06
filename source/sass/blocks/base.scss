@@ -3,11 +3,11 @@ html  {
 }
 
 body  {
+  @include center;
   margin: 0;
   font-family: $font-primary;
   font-size: $font-size;
   line-height: $line-height;
-  text-transform: uppercase;
   color: #000000;
   background-color: #ffffff;
 }
@@ -17,5 +17,10 @@ body  {
 }
 
 .button  {
+  display: block;
+  text-align: center;
   text-decoration: none;
+  border: none;
+  cursor: pointer;
 }
+

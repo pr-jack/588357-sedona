@@ -2,6 +2,7 @@
   height: 222px;
   border: 2px solid #000000;
   @include center;
+  text-transform: uppercase;
 }
 
 .promo__title  {

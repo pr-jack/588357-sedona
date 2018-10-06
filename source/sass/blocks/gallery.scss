@@ -1,9 +1,20 @@
 .gallery  {
+  padding-bottom: 25px;
   width: 320px;
   border: 2px solid #000000;
 }
 
 .gallery__image  {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px 0;
+}
+
+.gallery-item__caption {
+  font-family: 'PTSans_bold', Arial, sans-serif;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.gallery-item__author {
+  margin: 15px 0;
+  line-height: 22px;
 }
