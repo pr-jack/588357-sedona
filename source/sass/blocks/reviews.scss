@@ -1,0 +1,68 @@
+.reviews {
+  padding-bottom: 50px;
+  border: $border;
+}
+
+.reviews__form {
+  @include center;
+}
+
+.reviews-form__group {
+  border: none;
+  line-height: 26px;
+}
+
+.reviews-form__title {
+  @include font-title;
+  padding: 25px 0;
+}
+
+.reviews-form__list {
+  @include list;
+}
+
+
+.reviews-form__item {
+  padding-bottom: 20px;
+}
+
+.reviews-form__label {
+  line-height: 26px;
+  color: $text-color_2;
+}
+
+.reviews-form__input {
+  @include font-title;
+  padding: 18px 0;
+  background: $input-color-1;
+  border: none;
+  color: #000000;
+  text-transform: none;
+}
+
+.reviews-form__label-radio {
+  @include font-title;
+  text-transform: none;
+}
+
+.reviews-form__label-checkbox {
+  @include font-title;
+  text-transform: none;
+}
+
+.reviews-form__textarea {
+  @include font-title;
+  color: #000000;
+  background: $input-color-1;
+}
+
+.reviews-form__button {
+  @include font-title;
+  margin-top: 50px;
+  width: 280px;
+  padding: 16px 0;
+  font-size: 21px;
+  text-decoration: none;
+  background: $primary-color;
+  color: #ffffff;
+}

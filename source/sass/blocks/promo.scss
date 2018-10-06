@@ -1,0 +1,17 @@
+.promo {
+  @include center;
+  padding-bottom: 30px;
+  border: $border;
+}
+
+.promo__title {
+  @include font-title;
+  margin: 0;
+  padding: 40px 0;
+}
+
+.promo__text {
+  margin: 0;
+  line-height: 26px;
+  color: $text-color_2;
+}

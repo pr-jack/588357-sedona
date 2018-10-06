@@ -1,0 +1,28 @@
+.search {
+  @include center;
+  border: $border;
+  padding-bottom: 50px;
+}
+
+.search__title {
+  @include font-title;
+  margin: 0;
+  padding: 30px 0;
+  font-size: 21px;
+}
+
+.search__description {
+  margin: 0;
+  padding-bottom: 40px;
+  line-height: 21px;
+  color: $text-color_2;
+}
+
+.search__button {
+  @include font-title;
+  width: 280px;
+  padding: 16px 0;
+  font-size: 21px;
+  background: $primary-color;
+  color: #ffffff;
+}
