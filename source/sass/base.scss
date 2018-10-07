@@ -1,12 +1,12 @@
 body {
-  width: 320px;
+  min-width: 320px;
   margin: 0;
   font-family: $font-primary;
   font-size: $font-size;
   line-height: $line-height;
   text-transform: uppercase;
   color: #000000;
-  background-color: #ffffff;
+  background-color: $background-color;
 }
 
 a {
@@ -27,6 +27,7 @@ a {
   display: inline-block;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
   vertical-align: top;
   border: none;
   cursor: pointer;

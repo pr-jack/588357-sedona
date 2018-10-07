@@ -1,12 +1,12 @@
 .modal {
   @include center;
-  width: 100%;
+  width: 320px;
   padding-bottom: 35px;
   border: $border;
 }
 
 .modal__title {
-  @include font-title;
+  @include font-title-mobile;
   margin-top: 60px;
   margin-bottom: 5px;
 }
@@ -17,14 +17,42 @@
 }
 
 .modal__button {
-  @include font-title;
+  @include font-title-mobile;
   width: 180px;
   padding: 16px 0;
   text-decoration: none;
   background: $primary-color;
   color: #ffffff;
+
+  &--success {
+    width: 280px;
+  }
 }
 
-.modal__button--success {
-  width: 280px;
+@media (min-width: $tablet-width) {
+  .modal {
+    &--failure {
+      width: 400px;
+    }
+
+    &--success {
+      width: 645px;
+    }
+  }
+
+  .modal__button {
+    &--failure {
+      width: 320px;
+    }
+
+    &--success {
+      width: 460px;
+    }
+  }
+
+  .modal__text {
+    &--success {
+      width: 420px;
+    }
+  }
 }

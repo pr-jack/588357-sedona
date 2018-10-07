@@ -1,26 +1,29 @@
 .advantages {
   @include center;
   border: $border;
+  width: 100%;
 }
 
 .advantages__list {
   @include list;
+  @include center;
+  width: 100%;
 }
 
 .advantages__item {
   @include center;
 
   &--blue {
-    padding: 40px 0;
+    padding-top: 40px;
     color: #ffffff;
     background: $primary-color;
   }
 
   &--gray {
-    padding: 30px 0;
     background: $secondary-color;
   }
 
+  &--gray,
   &--house,
   &--souvenirs,
   &--food {
@@ -29,15 +32,68 @@
 }
 
 .advantages__title {
-  @include font-title;
+  @include font-title-mobile;
   margin: 0;
   padding-bottom: 50px;
 }
 
 .advantages__description {
   margin: 0;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
 
   &--gray {
     color: $text-color_2;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .advantages__item {
+    width: 100%;
+
+    &--blue {
+      width: 256px;
+    }
+
+    &--gray {
+      flex-direction: column;
+    }
+  }
+
+  .advantages__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .advantages__title {
+    @include font-title;
+    width: 155px;
+  }
+
+  .advantages__description {
+    width: 170px;
+  }
+
+  .advantages__block {
+    width: 100%;
+    display: flex;
+
+    &--3 {
+      .advantages__image {
+        order: -1;
+      }
+    }
+  }
+}
+
+@media (min-width: $desctop-width) {
+  .advantages__item {
+    flex-direction: column;
+
+    &--blue {
+      width: 400px;
+    }
   }
 }

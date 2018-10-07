@@ -5,6 +5,7 @@
 
 .reviews__form {
   @include center;
+  width: 100%;
 }
 
 .reviews-form__group {
@@ -13,7 +14,7 @@
 }
 
 .reviews-form__title {
-  @include font-title;
+  @include font-title-mobile;
   padding: 25px 0;
 }
 
@@ -32,7 +33,7 @@
 }
 
 .reviews-form__input {
-  @include font-title;
+  @include font-title-mobile;
   padding: 18px 0;
   background: $input-color-1;
   border: none;
@@ -41,23 +42,25 @@
 }
 
 .reviews-form__label-radio {
-  @include font-title;
+  @include font-title-mobile;
   text-transform: none;
 }
 
 .reviews-form__label-checkbox {
-  @include font-title;
+  @include font-title-mobile;
   text-transform: none;
 }
 
 .reviews-form__textarea {
-  @include font-title;
+  @include font-title-mobile;
+  width: 280px;
+  height: 160px;
   color: #000000;
   background: $input-color-1;
 }
 
 .reviews-form__button {
-  @include font-title;
+  @include font-title-mobile;
   margin-top: 50px;
   width: 280px;
   padding: 16px 0;
@@ -65,4 +68,67 @@
   text-decoration: none;
   background: $primary-color;
   color: #ffffff;
+}
+
+@media (min-width: $tablet-width) {
+  .reviews-form__group {
+    &--impression {
+      order: -1;
+    }
+
+    &--contacts {
+      width: 764px;
+    }
+
+    &--landmarks {
+      width: 764px;
+    }
+
+    &--textarea {
+      @include center;
+      flex-direction: column;
+    }
+  }
+
+  .reviews-form__list {
+    &--landmarks {
+      @include center;
+      margin: 0 auto;
+      width: 500px;
+    }
+  }
+
+  .reviews-form__item {
+    &--landmarks {
+      width: 220px;
+    }
+  }
+
+  .reviews-form__textarea {
+    width: 650px;
+  }
+
+  .reviews-form__button {
+    width: 325px;
+  }
+}
+
+@media (min-width: $desctop-width) {
+  .reviews-form__list {
+    &--contacts {
+      @include center;
+    }
+
+    &--landmarks {
+      width: 1200px;
+    }
+  }
+
+  .reviews-form__textarea {
+    width: 960px;
+  }
+
+  .reviews-form__button {
+    width: 480px;
+  }
 }

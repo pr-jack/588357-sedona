@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -49,7 +50,7 @@
         <section class="reviews">
 
           <form class="reviews__form reviews-form" action="http://echo.htmlacademy.ru" method="post">
-            <fieldset class="reviews-form__group">
+            <fieldset class="reviews-form__group reviews-form__group--name">
               <legend class="reviews-form__title">Представьтесь</legend>
                 <ul class="reviews-form__list">
                   <li class="reviews-form__item">
@@ -68,7 +69,7 @@
             </fieldset>
             <fieldset class="reviews-form__group reviews-form__group--contacts">
               <legend class="reviews-form__title">Контактная информация</legend>
-                <ul class="reviews-form__list">
+                <ul class="reviews-form__list reviews-form__list--contacts">
                   <li class="reviews-form__item">
                     <label class="reviews-form__label" for="user-phone">Контактный телефон*:</label>
                     <input class="reviews-form__input" id="user-phone" type="tel" pattern="[0-9]{6, 11}" name="userphone" placeholder="Введите телефон" required>
@@ -98,20 +99,20 @@
             </fieldset>
             <fieldset class="reviews-form__group reviews-form__group--landmarks">
               <legend class="reviews-form__title">Посещенные достопримечательности:</legend>
-                <ul class="reviews-form__list">
-                  <li class="reviews-form__item">
+                <ul class="reviews-form__list reviews-form__list--landmarks">
+                  <li class="reviews-form__item reviews-form__item--landmarks">
                     <input class="reviews-form__input-checkbox" type="checkbox" name="landmarks" value="bridge" id="bridge" checked>
                     <label class="reviews-form__label-checkbox" for="bridge">Мост Дьявола</label>
                   </li>
-                  <li class="reviews-form__item">
+                  <li class="reviews-form__item reviews-form__item--landmarks">
                     <input class="reviews-form__input-checkbox" type="checkbox" name="landmarks" value="mountain" id="mountain" checked>
                     <label class="reviews-form__label-checkbox" for="mountain">Гора-Колокол</label>
                   </li>
-                  <li class="reviews-form__item">
+                  <li class="reviews-form__item reviews-form__item--landmarks">
                     <input class="reviews-form__input-checkbox" type="checkbox" name="landmarks" value="park" id="park" checked>
                     <label class="reviews-form__label-checkbox" for="park">Слайд-парк</label>
                   </li>
-                  <li class="reviews-form__item">
+                  <li class="reviews-form__item reviews-form__item--landmarks">
                     <input class="reviews-form__input-checkbox" type="checkbox" name="landmarks" value="rocks" id="rocks">
                     <label class="reviews-form__label-checkbox" for="rocks">Красные скалы</label>
                   </li>
@@ -119,7 +120,7 @@
             </fieldset>
             <div class="reviews-form__group reviews-form__group--textarea">
               <legend class="reviews-form__title">Опишите свои эмоции:</legend>
-              <textarea class="reviews-form__textarea" id="user-text" rows="5" cols="28" name="text" placeholder="Опишите подробно все свои восторги"></textarea>
+              <textarea class="reviews-form__textarea" id="user-text" name="text" placeholder="Опишите подробно все свои восторги"></textarea>
             </div>
             <button class="reviews-form__button button" type="submit">Отправить отзыв</button>
           </form>
@@ -161,14 +162,14 @@
         <p class="modal__text">
           Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
         </p>
-        <button class="modal__button button">ok</button>
+        <button class="modal__button modal__button--failure button">ok</button>
       </section>
       <section class="modal modal--success">
         <h2 class="modal__title">Ваш отзыв отправлен!</h2>
-        <p class="modal__text">
-          Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.
+        <p class="modal__text modal__text--success">
+          Спасибо за ваше участиe, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.
         </p>
-        <button class="modal__button modal__button--success button">Закрыть окно</button>
+          <button class="modal__button modal__button--success button">Закрыть окно</button>
       </section>
   </body>
 </html>

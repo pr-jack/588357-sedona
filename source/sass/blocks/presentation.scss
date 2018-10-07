@@ -1,9 +1,10 @@
 .presentation {
+  width: 100%;
   border: 2px solid #000000;
 }
 
 .presentation__title {
-  @include font-title;
+  @include font-title-mobile;
   margin: 35px 0;
 }
 
@@ -11,4 +12,15 @@
   margin-left: 0;
   margin-bottom: 45px;
   line-height: 24px;
+}
+
+@media (min-width: $tablet-width) {
+  .presentation {
+    @include center;
+    flex-direction: column;
+  }
+
+  .presentation__description {
+    width: 420px;
+  }
 }
