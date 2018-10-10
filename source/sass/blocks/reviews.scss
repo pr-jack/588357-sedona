@@ -70,24 +70,13 @@
 }
 
 @media (min-width: $tablet-width) {
-  .reviews-form__group {
-    display: flex;
+  .reviews-form {
+    @include center;
+  }
 
+  .reviews-form__group {
     &--impression {
       order: -1;
-    }
-
-    &--contacts {
-      width: 764px;
-    }
-
-    &--landmarks {
-      width: 764px;
-    }
-
-    &--textarea {
-      @include center;
-      flex-direction: column;
     }
   }
 
