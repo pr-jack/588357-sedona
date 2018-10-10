@@ -12,8 +12,14 @@
   list-style: none;
 }
 
-@mixin font-title {
+@mixin font-title-mobile {
   font-family: "PTSans bold", "Arial", sans-serif;
   font-size: 18px;
+  line-height: 26px;
+}
+
+@mixin font-title {
+  font-family: "PTSans bold", "Arial", sans-serif;
+  font-size: 21px;
   line-height: 26px;
 }

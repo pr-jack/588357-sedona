@@ -1,13 +1,19 @@
 .page-footer {
-  @include center;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+.page-footer__wrappaer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   margin: 0 auto;
-  width: 150px;
+  padding: 0 80px;
 }
 
 .page-footer__hashtag {
   @include font-title;
-  margin: 40px 0;
-  font-size: 21px;
   text-decoration: none;
   color: #000000;
 }
@@ -19,17 +25,17 @@
 }
 
 .social__item {
-  @include center;
   width: 45px;
   height: 45px;
-  margin-right: 7px;
   background: $primary-color;
-}
-
-.page-footer__copyright {
-  margin-bottom: 35px;
 }
 
 .copyright__text {
   line-height: 26px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    width: 100%;
+  }
 }

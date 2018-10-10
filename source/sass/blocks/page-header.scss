@@ -1,3 +1,13 @@
-.page-header {
-  @include center;
+@media (min-width: $tablet-width) {
+  .page-header {
+    position: relative;
+  }
+
+  .page-header__logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
 }

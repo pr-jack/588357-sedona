@@ -4,7 +4,7 @@
   font-family: "PTSans bold", "Arial", sans-serif;
   font-size: 18px;
   line-height: 40px;
-  background: #81b3d2;
+  background: $primary-color;
 }
 
 .main-nav__list {
@@ -17,4 +17,29 @@
 .main-nav__list a {
   margin: 20px 0;
   color: #ffffff;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav {
+    @include font-title;
+    background: $background-color;
+    font-size: 14px;
+  }
+
+  .main-nav__list {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .main-nav__list a {
+    color: #000000;
+  }
+
+  .site-list__item {
+    width: 20%;
+  }
+
+  .site-list__item:nth-child(2) {
+    margin-right: 20%;
+  }
 }

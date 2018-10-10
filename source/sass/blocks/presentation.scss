@@ -1,9 +1,11 @@
 .presentation {
+  width: 100%;
+  text-align: center;
   border: 2px solid #000000;
 }
 
 .presentation__title {
-  @include font-title;
+  @include font-title-mobile;
   margin: 35px 0;
 }
 
