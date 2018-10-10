@@ -29,4 +29,22 @@
   .gallery-item__footer {
     display: flex;
   }
+
+  .gallery__item {
+    width: 50%;
+
+    &--top {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: $desctop-width) {
+  .gallery__item {
+    width: 33%;
+
+    &--top {
+      width: 100%;
+    }
+  }
 }

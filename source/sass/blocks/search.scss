@@ -1,8 +1,8 @@
 .search {
-  @include center;
   width: 100%;
   border: $border;
   padding-bottom: 50px;
+  text-align: center;
 }
 
 .search__title {
@@ -29,15 +29,12 @@
 }
 
 @media (min-width: $tablet-width) {
-  .search {
-    flex-direction: column;
-  }
-
   .search__title {
     font-size: 30px;
   }
 
   .search__description {
+    margin: 0 auto;
     width: 440px;
     line-height: 24px;
   }

@@ -4,7 +4,6 @@
 }
 
 .reviews__form {
-  @include center;
   width: 100%;
 }
 
@@ -72,6 +71,8 @@
 
 @media (min-width: $tablet-width) {
   .reviews-form__group {
+    display: flex;
+
     &--impression {
       order: -1;
     }

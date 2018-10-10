@@ -1,18 +1,17 @@
 .advantages {
-  @include center;
   border: $border;
   width: 100%;
 }
 
 .advantages__list {
   @include list;
-  @include center;
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
+  text-align: center;
 }
 
 .advantages__item {
-  @include center;
-
   &--blue {
     padding-top: 40px;
     color: #ffffff;
@@ -30,7 +29,11 @@
     padding: 30px 0;
   }
 }
-
+/* здесь не понимаю как сделать
+.advantages__item:nth-of-type(6) {
+  order: 2;
+}
+*/
 .advantages__title {
   @include font-title-mobile;
   margin: 0;
@@ -48,52 +51,57 @@
   }
 }
 
+.advantages__sublist {
+  @include list;
+}
+
 @media (min-width: $tablet-width) {
   .advantages__item {
-    width: 100%;
-
     &--blue {
       width: 256px;
     }
 
     &--gray {
-      flex-direction: column;
+      width: 33%;
     }
   }
 
   .advantages__list {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
   }
 
   .advantages__title {
     @include font-title;
+    margin: 0 auto;
     width: 155px;
   }
 
-  .advantages__description {
-    width: 170px;
+  .advantages__image {
+    width: 512px;
+    height: 255px;
   }
 
-  .advantages__block {
-    width: 100%;
+  .advantages__sublist {
     display: flex;
-
-    &--3 {
-      .advantages__image {
-        order: -1;
-      }
-    }
   }
 }
 
 @media (min-width: $desctop-width) {
   .advantages__item {
-    flex-direction: column;
-
     &--blue {
       width: 400px;
     }
+
+    &--house,
+    &--souvenirs,
+    &--food {
+      width: 33%;
+    }
+  }
+
+  .advantages__image {
+    width: 800px;
+    height: 255px;
   }
 }

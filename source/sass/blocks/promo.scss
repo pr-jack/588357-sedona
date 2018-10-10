@@ -1,6 +1,4 @@
 .promo {
-  @include center;
-  width: 100%;
   padding-bottom: 30px;
   border: $border;
 }
@@ -9,20 +7,18 @@
   @include font-title-mobile;
   margin: 0;
   padding: 40px 23px;
+  text-align: center;
 }
 
 .promo__description {
-  margin: 0;
+  margin: 0 auto;
   padding: 0 25px;
+  text-align: center;
   line-height: 26px;
   color: $text-color_2;
 }
 
 @media (min-width: $tablet-width) {
-  .promo {
-    flex-direction: column;
-  }
-
   .promo__title {
     @include font-title;
   }
