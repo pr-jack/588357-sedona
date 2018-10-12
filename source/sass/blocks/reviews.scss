@@ -1,6 +1,6 @@
 .reviews {
   padding-bottom: 50px;
-  border: $border;
+  background-color: $background-color-2;
 }
 
 .reviews__form {
@@ -10,6 +10,7 @@
 .reviews-form__group {
   border: none;
   line-height: 26px;
+  text-align: center;
 }
 
 .reviews-form__title {
@@ -19,8 +20,13 @@
 
 .reviews-form__list {
   @include list;
-}
 
+  &--impression,
+  &--landmarks {
+    text-align: left;
+    padding-left: 30px;
+  }
+}
 
 .reviews-form__item {
   padding-bottom: 20px;
@@ -33,11 +39,27 @@
 
 .reviews-form__input {
   @include font-title-mobile;
+  margin-left: 9px;
   padding: 18px 0;
+  padding-left: 20px;
   background: $input-color-1;
   border: none;
   color: #000000;
   text-transform: none;
+
+  &--name {
+    width: 209px;
+  }
+
+  &--surname,
+  &--patronymic {
+    width: 169px;
+  }
+
+  &--phone,
+  &--email {
+    width: 257px;
+  }
 }
 
 .reviews-form__label-radio {
@@ -61,6 +83,7 @@
 .reviews-form__button {
   @include font-title-mobile;
   margin-top: 50px;
+  margin-left: 20px;
   width: 280px;
   padding: 16px 0;
   font-size: 21px;
@@ -72,11 +95,27 @@
 @media (min-width: $tablet-width) {
   .reviews-form {
     @include center;
+    align-items: flex-start;
   }
 
   .reviews-form__group {
     &--impression {
       order: -1;
+    }
+
+    &--contacts {
+      padding-bottom: 50px;
+      width: 100%;
+    }
+  }
+
+  .reviews-form__title--textarea {
+    padding: 60px 0;
+  }
+
+  .reviews-form__title {
+    &--landmarks {
+      padding: 0 240px;
     }
   }
 
@@ -84,13 +123,37 @@
     &--landmarks {
       @include center;
       margin: 0 auto;
+      padding-top: 45px;
       width: 500px;
+      text-align: left;
     }
   }
 
   .reviews-form__item {
+    &--contacts {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 60px;
+      padding-bottom: 30px;
+    }
+
     &--landmarks {
       width: 220px;
+    }
+  }
+
+  .reviews-form__label {
+    &--phone,
+    &--email {
+      padding-left: 20px;
+    }
+  }
+
+  .reviews-form__input {
+    &--phone,
+    &--email {
+      margin: 0;
+      width: 630px;
     }
   }
 

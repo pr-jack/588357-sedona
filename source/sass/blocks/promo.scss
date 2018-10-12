@@ -1,12 +1,15 @@
 .promo {
   padding-bottom: 30px;
-  border: $border;
+  background-color: $background-color-2;
 }
 
 .promo__title {
   @include font-title-mobile;
   margin: 0;
-  padding: 40px 23px;
+  padding-top: 40px;
+  padding-right: 26px;
+  padding-left: 26px;
+  padding-bottom: 20px;
   text-align: center;
 }
 
@@ -19,11 +22,23 @@
 }
 
 @media (min-width: $tablet-width) {
+  .promo {
+    padding-bottom: 15px;
+  }
+
   .promo__title {
     @include font-title;
+    padding-top: 50px;
+    padding-bottom: 35px;
   }
 
   .promo__description {
     width: 435px;
+  }
+}
+
+@media (min-width: $desctop-width) {
+  .promo__title {
+    padding-top: 110px;
   }
 }
