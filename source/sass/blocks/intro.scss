@@ -1,19 +1,34 @@
-.intro {
+.intro{
+  position: relative;
   width: 100%;
+  min-height: 158px;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
+}
+
+.intro-main {
+  min-height: 390px;
+}
+
+.intro-main .intro__image {
+  padding-top: 90px;
 }
 
 .intro__image {
   display: block;
   margin: 0 auto;
-  padding-top: 80px;
+  padding-top: 52px;
   padding-bottom: 60px;
 }
 
 @media (min-width: $tablet-width) {
   .intro {
+    min-height: 290px;
     background-image: url("../img/bg-back-tablet@1x.jpg");
+  }
+
+  .intro-main {
+    min-height: 518px;
   }
 }
 

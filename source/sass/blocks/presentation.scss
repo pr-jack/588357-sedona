@@ -1,6 +1,7 @@
 .presentation {
   width: 100%;
-  padding-top: 35px;
+  padding-top: 31px;
+  padding-bottom: 79px;
   text-align: center;
   background-color: $background-color-2;
 }
@@ -8,7 +9,7 @@
 .presentation__title {
   @include font-title-mobile;
   margin: 0;
-  padding-bottom: 35px;
+  padding-bottom: 26px;
 }
 
 .presentation__description {
@@ -24,10 +25,12 @@
 @media (min-width: $tablet-width) {
   .presentation {
     padding-top: 65px;
+    padding-bottom: 13px;
   }
 
   .presentation__title {
     font-size: 30px;
+    padding-bottom: 32px;
   }
 
   .presentation__description {
@@ -36,5 +39,22 @@
 
   .presentation__video-wrapper {
     padding-top: 75px;
+  }
+
+  .presentation__video-player {
+    height: 500px;
+  }
+}
+
+@media (min-width: $desctop-width) {
+  .presentation {
+    padding-top: 69px;
+    padding-bottom: 56px;
+  }
+
+  .presentation__description {
+    width: 422px;
+    margin: 0 auto;
+    padding: 0;
   }
 }

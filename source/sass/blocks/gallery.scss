@@ -1,12 +1,17 @@
 .gallery {
   width: 100%;
+  padding-top: 10px;
   background-color: $background-color-2;
+}
+
+.gallery__item {
+  padding-bottom: 20px;
 }
 
 .gallery__image {
   display: block;
   padding: 20px;
-  margin-bottom: 15px;
+  padding-bottom: 15px;
 }
 
 .gallery-item__footer {
@@ -15,12 +20,13 @@
 
 .gallery-item__caption {
   font-family: "PTSans_bold", "Arial", sans-serif;
+  font-size: 14px;
   line-height: 24px;
 }
 
 .gallery-item__author {
   margin: 0;
-  padding-bottom: 15px;
+  padding-bottom: 11px;
   line-height: 22px;
   color: $text-color_2;
   text-transform: none;
@@ -35,6 +41,11 @@
   .gallery__image {
     margin: 0;
     padding: 0;
+    height: 268px;
+
+    &--top {
+      height: 400px;
+    }
   }
 
   .gallery-item__footer {
@@ -42,6 +53,11 @@
     justify-content: space-between;
     background-color: $background-color-1;
     padding-top: 15px;
+    padding-bottom: 7px;
+
+    &--top {
+      padding-bottom: 8px;
+    }
   }
 
   .gallery__item {
@@ -60,12 +76,16 @@
 
   .gallery .gallery__item:first-child {
     width: 648px;
-    margin-top: 58px;
+    margin-top: -16px;
     padding: 0 60px;
   }
 }
 
 @media (min-width: $desctop-width) {
+  .gallery {
+    padding-top: 0;
+  }
+
   .gallery .gallery__item:nth-child(even),
   .gallery .gallery__item:nth-child(odd) {
     width: 400px;
@@ -74,7 +94,7 @@
 
   .gallery .gallery__item:first-child {
     width: 1200px;
-    margin-top: 58px;
+    margin-top: -3px;
     padding: 0;
   }
 
