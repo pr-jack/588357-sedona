@@ -11,4 +11,3 @@ var navButtonClose = navMain.querySelector('.main-nav__toggle');
       navMain.classList.remove('main-nav--closed');
       navMain.classList.add('main-nav--opened');
   });
-

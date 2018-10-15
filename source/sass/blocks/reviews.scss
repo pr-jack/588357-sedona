@@ -74,6 +74,8 @@
 }
 
 .reviews-form__label-radio {
+  @include font-title-mobile;
+  text-transform: none;
   padding-left: 41px;
 }
 
@@ -111,11 +113,6 @@
     background: $background-color-2;
     box-shadow: inset $input-color-hover 0 0 0  4px;
   }
-}
-
-.reviews-form__label-radio {
-  @include font-title-mobile;
-  text-transform: none;
 }
 
 .reviews-form__label-checkbox {
