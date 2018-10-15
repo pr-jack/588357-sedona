@@ -1,6 +1,6 @@
 .reviews {
-  padding-bottom: 50px;
-  border: $border;
+  padding-bottom: 38px;
+  background-color: $background-color-2;
 }
 
 .reviews__form {
@@ -10,39 +10,109 @@
 .reviews-form__group {
   border: none;
   line-height: 26px;
+  text-align: center;
 }
 
 .reviews-form__title {
   @include font-title-mobile;
-  padding: 25px 0;
+  padding: 16px 0;
+
+  &--impression {
+    padding-top: 26px;
+  }
+
+  &--landmarks {
+    padding-top: 26px;
+  }
+
+  &--textarea {
+    padding-top: 4px;
+  }
 }
 
 .reviews-form__list {
   @include list;
+
+  &--impression,
+  &--landmarks {
+    text-align: left;
+    padding-left: 30px;
+  }
 }
 
-
 .reviews-form__item {
-  padding-bottom: 20px;
+  padding-bottom: 16px;
+
+  &--contacts {
+    padding-bottom: 10px;
+    text-align: left;
+  }
+
+  &--impression {
+    padding-top: 16px;
+    padding-bottom: 26px;
+  }
+
+  &--landmarks {
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-bottom: 43px;
+  }
 }
 
 .reviews-form__label {
   line-height: 26px;
   color: $text-color_2;
-}
 
-.reviews-form__input {
-  @include font-title-mobile;
-  padding: 18px 0;
-  background: $input-color-1;
-  border: none;
-  color: #000000;
-  text-transform: none;
+  &--phone {
+    padding-left: 31px;
+  }
+
+  &--email {
+    padding-left: 31px;
+  }
 }
 
 .reviews-form__label-radio {
   @include font-title-mobile;
   text-transform: none;
+  padding-left: 41px;
+}
+
+.reviews-form__input {
+  @include font-title-mobile;
+  margin-left: 9px;
+  padding: 18px 0;
+  padding-left: 20px;
+  background: $input-color-1;
+  border: none;
+  color: #000000;
+  text-transform: none;
+
+  &--name {
+    width: 209px;
+  }
+
+  &--surname,
+  &--patronymic {
+    width: 169px;
+  }
+
+  &--phone,
+  &--email {
+    width: 257px;
+    padding-top: 21px;
+  }
+
+  &:hover {
+    background: $input-color-hover;
+  }
+
+  &:focus {
+    outline: none;
+    background: $background-color-2;
+    box-shadow: inset $input-color-hover 0 0 0  4px;
+  }
 }
 
 .reviews-form__label-checkbox {
@@ -52,31 +122,79 @@
 
 .reviews-form__textarea {
   @include font-title-mobile;
-  width: 280px;
-  height: 160px;
+  width: 234px;
+  height: 141px;
+  padding-top: 16px;
+  padding-left: 18px;
+  padding-right: 25px;
   color: #000000;
   background: $input-color-1;
+  outline: none;
 }
 
 .reviews-form__button {
   @include font-title-mobile;
-  margin-top: 50px;
+  margin-top: 44px;
+  margin-left: 20px;
   width: 280px;
   padding: 16px 0;
   font-size: 21px;
   text-decoration: none;
   background: $primary-color;
   color: #ffffff;
+
+  &:hover {
+    background: $background-hover;
+  }
+
+  &:active {
+    background: $background-active;
+    color: $color-hover;
+  }
+}
+
+.reviews-form__description {
+  display: none;
 }
 
 @media (min-width: $tablet-width) {
+  .reviews {
+    padding-bottom: 65px;
+  }
+
   .reviews-form {
     @include center;
+    align-items: flex-start;
   }
 
   .reviews-form__group {
     &--impression {
       order: -1;
+    }
+
+    &--contacts {
+      padding-bottom: 30px;
+      width: 100%;
+    }
+  }
+
+  .reviews-form__title {
+    font-size: 21px;
+    padding: 0;
+    padding-bottom: 50px;
+
+    &--textarea {
+      padding-top: 33px;
+      padding-bottom: 56px;
+    }
+
+    &--landmarks {
+      padding: 0 240px;
+    }
+
+    &--contacts {
+      padding-top: 42px;
+      padding-bottom: 18px;
     }
   }
 
@@ -84,33 +202,162 @@
     &--landmarks {
       @include center;
       margin: 0 auto;
-      width: 500px;
+      padding-top: 45px;
+      text-align: left;
     }
   }
 
   .reviews-form__item {
+    padding-left: 73px;
+
+    &--name {
+      padding-left: 103px;
+    }
+
+    &--contacts {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 60px;
+      padding-bottom: 23px;
+    }
+
     &--landmarks {
       width: 220px;
+      padding-left: 41px;
+    }
+
+    &--impression {
+      padding-bottom: 35px;
+      padding-left: 48px;
+    }
+  }
+
+  .reviews-form__label {
+    &--phone,
+    &--email {
+      padding-left: 20px;
+    }
+  }
+
+  .reviews-form__label-radio {
+    padding-left: 0;
+  }
+
+  .reviews-form__label-checkbox {
+    padding-left: 38px;
+  }
+
+  .reviews-form__input {
+    &--phone,
+    &--email {
+      margin: 0;
+      width: 630px;
+    }
+
+    &--name {
+      width: 216px;
     }
   }
 
   .reviews-form__textarea {
-    width: 650px;
+    width: 609px;
+    padding: 0;
+    padding-top: 16px;
+    padding-left: 40px;
   }
 
   .reviews-form__button {
     width: 325px;
+    margin-top: 52px;
+    margin-left: 0;
+  }
+
+  .reviews-form__description {
+    display: block;
+    font-family: $font-primary;
+    font-size: $font-size;
+    line-height: 26px;
+    padding-top: 56px;
+  }
+
+  .reviews__wrapper {
+    width: 649px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
 @media (min-width: $desctop-width) {
-  .reviews-form__list {
+  .desctop-hidden {
+    display: none;
+  }
+
+  .reviews-form__group {
     &--contacts {
-      @include center;
+      padding-bottom: 27px;
+    }
+  }
+
+  .reviews-form__title {
+    &--name {
+      padding-left: 10px;
+    }
+
+    &--contacts {
+      padding-top: 40px;
     }
 
     &--landmarks {
-      width: 1200px;
+      width: 280px;
+    }
+
+    &--textarea {
+      padding-top: 28px;
+    }
+  }
+
+  .reviews-form__list {
+    &--contacts {
+      @include center;
+      padding-top: 47px;
+    }
+
+    &--landmarks {
+      width: 962px;
+      padding-top: 40px;
+      padding-left: 0;
+      justify-content: space-between;
+    }
+  }
+
+  .reviews-form__item {
+    &--name {
+      padding-left: 145px;
+    }
+
+    &--impression {
+      padding-left: 0;
+      margin-left: -84px;
+    }
+
+    &--contacts {
+      width: 400px;
+      flex-wrap: nowrap;
+    }
+
+    &--landmarks {
+      padding-left: 28px;
+      width: auto;
+    }
+  }
+
+  .reviews-form__label {
+    &--phone {
+      padding-left: 0;
+      padding-top: 21px;
+      padding-right: 16px;
+      margin-left: -19px;
     }
   }
 
@@ -120,5 +367,9 @@
 
   .reviews-form__button {
     width: 480px;
+  }
+
+  .reviews__wrapper {
+    width: 959px;
   }
 }

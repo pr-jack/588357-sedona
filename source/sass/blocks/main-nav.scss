@@ -1,42 +1,125 @@
 .main-nav {
-  width: 100%;
-  padding-bottom: 20px;
+  position: relative;
   font-family: "PTSans bold", "Arial", sans-serif;
   font-size: 18px;
   line-height: 40px;
   background: $primary-color;
 }
 
-.main-nav__list {
-  @include center;
-  @include list;
-  margin: 0 auto;
-  width: 140px;
+.site-list__item {
+  display: block;
+  cursor: pointer;
 }
 
-.main-nav__list a {
-  margin: 20px 0;
-  color: #ffffff;
+@media (max-width: $mobile-width-only) {
+  .main-nav--closed {
+    display: none;
+  }
+
+  .main-nav--opened {
+    .main-nav {
+      position: relative;
+      font-family: "PTSans bold", "Arial", sans-serif;
+      font-size: 18px;
+      line-height: 40px;
+      background: $primary-color;
+    }
+
+    .main-nav__list {
+      @include list;
+      margin: 0 auto;
+      width: 100%;
+      text-align: center;
+    }
+
+    .site-list__item a:nth-of-type(1) {
+      border-bottom: 1px solid rgba(1, 1, 1, 0.2);
+      border-top: none;
+    }
+
+    .site-list__item a {
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      border-bottom: 1px solid rgba(1, 1, 1, 0.2);
+    }
+
+    .main-nav__list a {
+      display: block;
+      padding: 7px 0;
+      color: #ffffff;
+
+      &:hover {
+        background: $background-hover;
+      }
+
+      &:active {
+        background: $background-active;
+      }
+    }
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__toggle {
+    position: absolute;
+    top: 10px;
+    right: 26px;
+    display: block;
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    outline: none;
+
+    polygon {
+      fill: #ffffff;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {
   .main-nav {
     @include font-title;
-    background: $background-color;
+    background: $background-color-2;
     font-size: 14px;
   }
 
+  .main-nav__toggle {
+    display: none;
+  }
+
   .main-nav__list {
+    @include center;
+    @include list;
     width: 100%;
     justify-content: space-around;
   }
 
-  .main-nav__list a {
-    color: #000000;
+  .site-list__item {
+    padding: 15px 0;
+    width: 20%;
   }
 
-  .site-list__item {
-    width: 20%;
+  .site-list__item a {
+    color: #000000;
+
+    &:hover {
+      color: $primary-color;
+    }
+
+    &:active {
+      color: $color-active;
+    }
+  }
+
+  .site-list__item--active a {
+    color: $color-curent;
+
+    &:hover {
+      color: $color-curent-hover;
+    }
   }
 
   .site-list__item:nth-child(2) {

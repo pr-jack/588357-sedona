@@ -1,16 +1,60 @@
 .presentation {
   width: 100%;
+  padding-top: 31px;
+  padding-bottom: 79px;
   text-align: center;
-  border: 2px solid #000000;
+  background-color: $background-color-2;
 }
 
 .presentation__title {
   @include font-title-mobile;
-  margin: 35px 0;
+  margin: 0;
+  padding-bottom: 26px;
 }
 
 .presentation__description {
-  margin-left: 0;
-  margin-bottom: 45px;
+  margin: 0;
+  padding: 0 40px;
   line-height: 24px;
+}
+
+.presentation__video-wrapper {
+  padding-top: 35px;
+}
+
+@media (min-width: $tablet-width) {
+  .presentation {
+    padding-top: 65px;
+    padding-bottom: 13px;
+  }
+
+  .presentation__title {
+    font-size: 30px;
+    padding-bottom: 32px;
+  }
+
+  .presentation__description {
+    padding: 0 170px;
+  }
+
+  .presentation__video-wrapper {
+    padding-top: 75px;
+  }
+
+  .presentation__video-player {
+    height: 500px;
+  }
+}
+
+@media (min-width: $desctop-width) {
+  .presentation {
+    padding-top: 69px;
+    padding-bottom: 56px;
+  }
+
+  .presentation__description {
+    width: 422px;
+    margin: 0 auto;
+    padding: 0;
+  }
 }
