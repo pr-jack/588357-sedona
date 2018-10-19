@@ -1,5 +1,5 @@
 .promo {
-  padding-bottom: 19px;
+  padding-bottom: 18px;
   background-color: $background-color-2;
 
   &--main {
@@ -14,11 +14,15 @@
   padding-top: 37px;
   padding-bottom: 27px;
   text-align: center;
+
+  &--main {
+    padding-top: 39px;
+  }
 }
 
 .promo__description {
   margin: 0 auto;
-  width: 277px;
+  width: 275px;
   text-align: center;
   line-height: 24px;
   color: $text-color_2;
@@ -53,12 +57,16 @@
 
   .promo__description {
     width: 445px;
+
+    &--main {
+      width: 490px;
+    }
   }
 }
 
 @media (min-width: $desctop-width) {
   .promo__title {
-    padding-top: 122px;
+    padding-top: 110px;
 
     &--main {
       padding-top: 50px;

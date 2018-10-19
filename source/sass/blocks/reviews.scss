@@ -5,17 +5,32 @@
 
 .reviews__form {
   width: 100%;
+  text-align: center;
 }
 
 .reviews-form__group {
+  margin: 0 auto;
+  padding: 0;
+  padding-bottom: 7px;
+  width: 280px;
   border: none;
   line-height: 26px;
-  text-align: center;
+
+  &--impression {
+    padding-bottom: 0;
+  }
+
+  &--landmarks {
+    .reviews-form__title {
+      padding-bottom: 33px;
+    }
+  }
 }
 
 .reviews-form__title {
   @include font-title-mobile;
   padding: 16px 0;
+  padding-bottom: 20px;
 
   &--impression {
     padding-top: 26px;
@@ -28,35 +43,54 @@
   &--textarea {
     padding-top: 4px;
   }
+
+  &--line {
+    width: 100%;
+    border-top: 1px solid $input-color-hover;
+  }
 }
 
 .reviews-form__list {
   @include list;
 
-  &--impression,
-  &--landmarks {
-    text-align: left;
-    padding-left: 30px;
+  &--impression {
+    padding-top: 18px;
   }
 }
 
 .reviews-form__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding-bottom: 16px;
 
   &--contacts {
-    padding-bottom: 10px;
+    display: block;
+    padding-bottom: 21px;
     text-align: left;
+
+    .reviews-form__input {
+      margin: 0;
+    }
   }
 
   &--impression {
-    padding-top: 16px;
-    padding-bottom: 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 43px;
   }
 
   &--landmarks {
-    padding-top: 10px;
-    padding-left: 40px;
-    padding-bottom: 43px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: none;
+    padding-bottom: 54px;
+  }
+
+  &--landmarks:last-of-type {
+    padding-bottom: 35px;
   }
 }
 
@@ -76,33 +110,32 @@
 .reviews-form__label-radio {
   @include font-title-mobile;
   text-transform: none;
-  padding-left: 41px;
+  padding-left: 77px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.reviews-form__label-checkbox {
+  @include font-title-mobile;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  padding-left: 78px;
 }
 
 .reviews-form__input {
   @include font-title-mobile;
-  margin-left: 9px;
-  padding: 18px 0;
-  padding-left: 20px;
+  width: 100%;
+  flex-grow: 1;
+  margin-left: 15px;
+  padding: 18px 20px;
   background: $input-color-1;
   border: none;
   color: #000000;
   text-transform: none;
-
-  &--name {
-    width: 209px;
-  }
-
-  &--surname,
-  &--patronymic {
-    width: 169px;
-  }
-
-  &--phone,
-  &--email {
-    width: 257px;
-    padding-top: 21px;
-  }
 
   &:hover {
     background: $input-color-hover;
@@ -115,15 +148,64 @@
   }
 }
 
-.reviews-form__label-checkbox {
-  @include font-title-mobile;
-  text-transform: none;
+.reviews-form__input-radio + label {
+  &::before {
+    position: absolute;
+    content: "";
+    width: 56px;
+    height: 56px;
+    left: 0;
+    top: -14px;
+    border-radius: 50%;
+    background: $background-color-1;
+  }
+}
+
+.reviews-form__input-radio:checked + label {
+  &::after {
+    position: absolute;
+    content: "";
+    width: 22px;
+    height: 22px;
+    left: 17px;
+    top: 3px;
+    border-radius: 50%;
+    background: $text-color_2;
+  }
+}
+
+.reviews-form__input-checkbox + label {
+  &::before {
+    position: absolute;
+    content: "";
+    width: 56px;
+    height: 55px;
+    left: 0;
+    top: -14px;
+    border-radius: 10%;
+    background: $background-color-1;
+  }
+}
+
+.reviews-form__input-checkbox:checked + label {
+  &::after {
+    position: absolute;
+    content: "";
+    width: 21px;
+    height: 14px;
+    left: 16px;
+    top: 3px;
+    border-left: 4px solid #000000;
+    border-bottom: 4px solid #000000;
+    background: transparent;
+    transform: rotate(-45deg);
+  }
 }
 
 .reviews-form__textarea {
   @include font-title-mobile;
-  width: 234px;
-  height: 141px;
+  width: 280px;
+  height: 157px;
   padding-top: 16px;
   padding-left: 18px;
   padding-right: 25px;
@@ -134,8 +216,7 @@
 
 .reviews-form__button {
   @include font-title-mobile;
-  margin-top: 44px;
-  margin-left: 20px;
+  margin-top: 37px;
   width: 280px;
   padding: 16px 0;
   font-size: 21px;
@@ -168,13 +249,42 @@
   }
 
   .reviews-form__group {
+    width: 308px;
+
+    &--name {
+      text-align: left;
+      padding-right: 24px;
+    }
+
     &--impression {
       order: -1;
     }
 
     &--contacts {
-      padding-bottom: 30px;
+      padding: 0 59px;
+      padding-bottom: 26px;
       width: 100%;
+
+      .reviews-form__title {
+        padding-top: 35px;
+        padding-bottom: 24px;
+      }
+    }
+
+    &--landmarks {
+      width: 100%;
+      padding-bottom: 21px;
+
+      .reviews-form__title {
+        width: 290px;
+        padding-bottom: 11px;
+      }
+    }
+
+    &--textarea {
+      .reviews-form__title {
+        padding-bottom: 58px;
+      }
     }
   }
 
@@ -182,23 +292,19 @@
     font-size: 21px;
     padding: 0;
     padding-bottom: 50px;
+    padding-left: 17px;
 
-    &--textarea {
-      padding-top: 33px;
-      padding-bottom: 56px;
-    }
-
-    &--landmarks {
-      padding: 0 240px;
-    }
-
-    &--contacts {
-      padding-top: 42px;
-      padding-bottom: 18px;
+    &--line {
+      border-top: none;
     }
   }
 
   .reviews-form__list {
+    &--impression {
+      @include center;
+      padding-top: 21px;
+    }
+
     &--landmarks {
       @include center;
       margin: 0 auto;
@@ -208,34 +314,49 @@
   }
 
   .reviews-form__item {
-    padding-left: 73px;
+    padding-left: 0;
 
     &--name {
-      padding-left: 103px;
+      padding-left: 0;
+
+      .reviews-form__input {
+        padding: 18px 20px;
+      }
     }
 
     &--contacts {
       display: flex;
       flex-wrap: wrap;
-      padding: 0 60px;
       padding-bottom: 23px;
+
+      .reviews-form__input {
+        padding: 18px 20px;
+      }
     }
 
     &--landmarks {
-      width: 220px;
-      padding-left: 41px;
+      width: 259px;
+      padding-left: 71px;
+      padding-bottom: 62px;
+    }
+
+    &--landmarks:last-of-type {
+      margin-top: -27px;
     }
 
     &--impression {
-      padding-bottom: 35px;
-      padding-left: 48px;
+      padding-bottom: 52px;
+      padding-left: 68px;
     }
   }
 
   .reviews-form__label {
+    padding-left: 20px;
+
     &--phone,
     &--email {
       padding-left: 20px;
+      padding-bottom: 5px;
     }
   }
 
@@ -260,7 +381,7 @@
   }
 
   .reviews-form__textarea {
-    width: 609px;
+    width: 650px;
     padding: 0;
     padding-top: 16px;
     padding-left: 40px;
@@ -268,7 +389,7 @@
 
   .reviews-form__button {
     width: 325px;
-    margin-top: 52px;
+    margin-top: 46px;
     margin-left: 0;
   }
 
@@ -277,7 +398,7 @@
     font-family: $font-primary;
     font-size: $font-size;
     line-height: 26px;
-    padding-top: 56px;
+    padding-top: 48px;
   }
 
   .reviews__wrapper {
@@ -285,6 +406,33 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .reviews-form__input-radio + label {
+    &::before {
+      left: -75px;
+    }
+  }
+
+  .reviews-form__input-radio:checked + label {
+    &::after {
+
+      left: -58px;
+    }
+  }
+
+  .reviews-form__input-checkbox + label {
+    &::before {
+      left: -40px;
+      top: -14px;
+    }
+  }
+
+  .reviews-form__input-checkbox:checked + label {
+    &::after {
+      left: -22px;
+      top: 3px;
+    }
   }
 }
 
@@ -294,55 +442,71 @@
   }
 
   .reviews-form__group {
+    &--name {
+      width: 421px;
+      text-align: left;
+      padding-right: 16px;
+
+      .reviews-form__title {
+        padding-left: 5px;
+      }
+    }
+
     &--contacts {
       padding-bottom: 27px;
-    }
-  }
 
-  .reviews-form__title {
-    &--name {
-      padding-left: 10px;
+      .reviews-form__title {
+        padding-top: 33px;
+        padding-bottom: 71px;
+      }
     }
 
-    &--contacts {
-      padding-top: 40px;
+    &--impression {
+      @include center;
+      width: 369px;
+      text-align: right;
     }
 
     &--landmarks {
-      width: 280px;
+      .reviews-form__title {
+        padding-left: 2px;
+      }
     }
 
     &--textarea {
-      padding-top: 28px;
+      .reviews-form__title {
+        padding-left: 0;
+      }
     }
   }
 
   .reviews-form__list {
     &--contacts {
       @include center;
+      justify-content: space-between;
+      padding: 0 62px;
       padding-top: 47px;
     }
 
     &--landmarks {
       width: 962px;
-      padding-top: 40px;
-      padding-left: 0;
+      padding-top: 47px;
+      padding-left: 15px;
       justify-content: space-between;
     }
   }
 
   .reviews-form__item {
     &--name {
-      padding-left: 145px;
+      padding-left: 0;
     }
 
     &--impression {
-      padding-left: 0;
-      margin-left: -84px;
+      padding-left: 10px;
     }
 
     &--contacts {
-      width: 400px;
+      width: 50%;
       flex-wrap: nowrap;
     }
 
@@ -353,11 +517,17 @@
   }
 
   .reviews-form__label {
+    padding-left: 6px;
+
     &--phone {
       padding-left: 0;
       padding-top: 21px;
       padding-right: 16px;
-      margin-left: -19px;
+    }
+
+    &--email {
+      padding-left: 0;
+      padding-right: 19px;
     }
   }
 
@@ -367,6 +537,7 @@
 
   .reviews-form__button {
     width: 480px;
+    margin-top: 44px;
   }
 
   .reviews__wrapper {
