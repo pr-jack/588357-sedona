@@ -13,16 +13,16 @@
 }
 
 .search__description {
-  margin: 0;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 35px;
+  width: 262px;
+  margin: 0 auto;
+  padding-bottom: 36px;
   line-height: 24px;
   color: $text-color_2;
 }
 
 .search__button {
   @include font-title-mobile;
+  font-size: 21px;
   width: 280px;
   padding: 16px 0;
   background: $primary-color;
