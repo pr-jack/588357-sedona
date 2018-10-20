@@ -1,21 +1,23 @@
 .gallery {
   width: 100%;
-  padding-top: 10px;
+  padding-top: 12px;
   background-color: $background-color-2;
 }
 
 .gallery__item {
+  width: 280px;
+  margin: 0 auto;
+  padding-top: 20px;
   padding-bottom: 20px;
 }
 
 .gallery__image {
   display: block;
-  padding: 20px;
-  padding-bottom: 15px;
+  padding-bottom: 9px;
 }
 
 .gallery-item__footer {
-  padding: 0 20px;
+
 }
 
 .gallery-item__caption {

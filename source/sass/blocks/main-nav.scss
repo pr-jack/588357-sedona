@@ -1,7 +1,7 @@
 .main-nav {
   position: relative;
-  font-family: "PTSans bold", "Arial", sans-serif;
-  font-size: 18px;
+  @include font-title-mobile;
+  font-weight: 700;
   line-height: 40px;
   background: $primary-color;
 }
@@ -57,11 +57,12 @@
     }
   }
 
-  .main-nav--nojs .main-nav__toggle {
+  .main-nav--nojs {
     display: none;
   }
 
   .main-nav__toggle {
+    display: block;
     position: absolute;
     top: 10px;
     right: 26px;
@@ -82,6 +83,7 @@
 @media (min-width: $tablet-width) {
   .main-nav {
     @include font-title;
+    font-weight: 700;
     background: $background-color-2;
     font-size: 14px;
   }
