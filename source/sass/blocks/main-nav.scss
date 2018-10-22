@@ -53,6 +53,7 @@
 
       &:active {
         background: $background-active;
+        color: $color-hover;
       }
     }
   }
@@ -128,6 +129,10 @@
 
     &:hover {
       color: $color-curent-hover;
+    }
+
+    &:active {
+      color: $color-curent-active;
     }
   }
 
