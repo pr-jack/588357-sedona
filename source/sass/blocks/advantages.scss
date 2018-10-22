@@ -32,7 +32,7 @@
   &--souvenirs {
     .advantages__title {
       &--sublist {
-        padding-top: 32px;
+        padding-top: 28px;
       }
     }
   }
@@ -40,7 +40,7 @@
   &--food {
     .advantages__title {
       &--sublist {
-        padding-top: 32px;
+        padding-top: 27px;
       }
     }
   }
@@ -84,12 +84,14 @@
   @include font-title-mobile;
   font-weight: 700;
   margin: 0;
-  padding-top: 40px;
+  padding-top: 39px;
   padding-bottom: 13px;
 
   &--sublist {
+    @include font-title-mobile;
+    font-weight: 700;
     margin: 0;
-    padding-top: 39px;
+    padding-top: 35px;
   }
 }
 
@@ -155,7 +157,7 @@
     &--souvenirs,
     &--food {
       width: 256px;
-      padding-top: 127px;
+      padding-top: 131px;
     }
   }
 
@@ -223,7 +225,7 @@
 
   .advantages__icon {
     &--house {
-      top: 31px;
+      top: 35px;
       left: 90px;
     }
 
@@ -309,7 +311,7 @@
 
   .advantages__icon {
     &--house {
-      top: 32px;
+      top: 36px;
       left: 155px;
     }
 

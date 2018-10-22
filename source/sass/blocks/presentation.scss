@@ -1,9 +1,11 @@
 .presentation {
   width: 100%;
-  padding-top: 31px;
+  margin-top: -7px;
+  padding-top: 33px;
   padding-bottom: 79px;
   text-align: center;
   background-color: $background-color-2;
+  border-top: 1px solid $input-color-hover;
 }
 
 .presentation__title {
@@ -20,6 +22,8 @@
 }
 
 .presentation__video-wrapper {
+  width: 320px;
+  margin: 0 auto;
   position: relative;
   padding-top: 35px;
 }
@@ -76,45 +80,35 @@
   @include center;
   justify-content: space-between;
   height: 66px;
-  padding: 0 22px;
+  padding: 0 17px;
+  padding-top: 4px;
   background-color: $input-color-1;
 }
 
-.option__repeat {
-  width: 20px;
-  height: 20px;
-  background-image: url("../img/icon-video-replay.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.option__subtitles {
-  width: 33px;
-  height: 20px;
-  margin-left: 98px;
-  background-image: url("../img/icon-video-subtitles.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
+.option__repeat,
+.option__subtitles,
 .option__fullscreen {
-  width: 20px;
-  height: 20px;
-  background-image: url("../img/icon-video-fullscreen.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
+  fill: $video-controls-base;
 
+  &:hover {
+    fill: $video-controls-hover;
+  }
+
+  &:active {
+    fill: $video-controls-active;
+  }
+}
 
 @media (min-width: $tablet-width) {
   .presentation {
-    padding-top: 65px;
+    padding-top: 74px;
     padding-bottom: 13px;
+    border: none;
   }
 
   .presentation__title {
     font-size: 30px;
-    padding-bottom: 32px;
+    padding-bottom: 30px;
   }
 
   .presentation__description {
@@ -123,8 +117,9 @@
   }
 
   .presentation__video-wrapper {
+    width: 100%;
     padding: 0 60px;
-    padding-top: 75px;
+    padding-top: 0;
   }
 
   .presentation__video-player {
@@ -140,7 +135,7 @@
 
 @media (min-width: $desctop-width) {
   .presentation {
-    padding-top: 69px;
+    padding-top: 76px;
     padding-bottom: 56px;
   }
 
@@ -148,7 +143,7 @@
     width: 422px;
     margin: 0 auto;
     padding: 0;
-    padding-bottom: 69px;
+    padding-bottom: 70px;
   }
 
   .presentation__video-player {
