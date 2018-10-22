@@ -10,17 +10,26 @@
 
 .reviews-form__group {
   margin: 0 auto;
-  padding: 0;
+  padding: 0 20px;
   padding-bottom: 7px;
-  width: 280px;
   border: none;
   line-height: 26px;
 
+  &--contacts {
+    padding-bottom: 17px;
+
+    .reviews-form__title {
+      padding-top: 17px;
+    }
+  }
+
   &--impression {
-    padding-bottom: 0;
+    margin-bottom: -6px;
   }
 
   &--landmarks {
+    padding-bottom: 6px;
+
     .reviews-form__title {
       padding-bottom: 33px;
     }
@@ -29,6 +38,7 @@
 
 .reviews-form__title {
   @include font-title-mobile;
+  font-weight: 700;
   padding: 16px 0;
   padding-bottom: 20px;
 
@@ -66,11 +76,15 @@
 
   &--contacts {
     display: block;
-    padding-bottom: 21px;
+    position: relative;
+    padding-bottom: 11px;
     text-align: left;
 
     .reviews-form__input {
       margin: 0;
+      padding: 0 20px;
+      padding-top: 15px;
+      padding-bottom: 17px;
     }
   }
 
@@ -95,20 +109,52 @@
 }
 
 .reviews-form__label {
+  display: block;
   line-height: 26px;
   color: $text-color_2;
 
   &--phone {
-    padding-left: 31px;
+    padding-left: 21px;
+    padding-bottom: 9px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 57px;
+      height: 57px;
+      right: 0;
+      top: 35px;
+      background: $input-color-2;
+      background-image: url("../img/symbol-phone.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: 2;
+    }
   }
 
   &--email {
-    padding-left: 31px;
+    padding-left: 21px;
+    padding-bottom: 8px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 57px;
+      height: 57px;
+      right: 0;
+      top: 35px;
+      background: $input-color-2;
+      background-image: url("../img/symbol-mail.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: 2;
+    }
   }
 }
 
 .reviews-form__label-radio {
   @include font-title-mobile;
+  font-weight: 700;
   text-transform: none;
   padding-left: 77px;
   position: relative;
@@ -119,6 +165,7 @@
 
 .reviews-form__label-checkbox {
   @include font-title-mobile;
+  font-weight: 700;
   position: relative;
   display: block;
   cursor: pointer;
@@ -128,8 +175,8 @@
 
 .reviews-form__input {
   @include font-title-mobile;
+  font-weight: 700;
   width: 100%;
-  flex-grow: 1;
   margin-left: 15px;
   padding: 18px 20px;
   background: $input-color-1;
@@ -204,18 +251,21 @@
 
 .reviews-form__textarea {
   @include font-title-mobile;
-  width: 280px;
+  font-weight: 700;
+  width: 100%;
   height: 157px;
-  padding-top: 16px;
+  padding-top: 14px;
   padding-left: 18px;
   padding-right: 25px;
   color: #000000;
   background: $input-color-1;
   outline: none;
+  border: none;
 }
 
 .reviews-form__button {
   @include font-title-mobile;
+  font-weight: 700;
   margin-top: 37px;
   width: 280px;
   padding: 16px 0;
@@ -250,24 +300,34 @@
 
   .reviews-form__group {
     width: 308px;
+    padding: 0;
 
     &--name {
       text-align: left;
       padding-right: 24px;
+
+      .reviews-form__title {
+        padding-bottom: 54px;
+      }
     }
 
     &--impression {
       order: -1;
+
+      .reviews-form__title {
+        padding-left: 6px;
+      }
     }
 
     &--contacts {
-      padding: 0 59px;
-      padding-bottom: 26px;
+      padding: 0 61px;
+      padding-bottom: 28px;
       width: 100%;
 
       .reviews-form__title {
-        padding-top: 35px;
+        padding-top: 41px;
         padding-bottom: 24px;
+        padding-left: 0;
       }
     }
 
@@ -278,12 +338,14 @@
       .reviews-form__title {
         width: 290px;
         padding-bottom: 11px;
+        padding-left: 0;
       }
     }
 
     &--textarea {
       .reviews-form__title {
         padding-bottom: 58px;
+        padding-left: 0;
       }
     }
   }
@@ -327,7 +389,7 @@
     &--contacts {
       display: flex;
       flex-wrap: wrap;
-      padding-bottom: 23px;
+      padding-bottom: 22px;
 
       .reviews-form__input {
         padding: 18px 20px;
@@ -358,6 +420,19 @@
       padding-left: 20px;
       padding-bottom: 5px;
     }
+
+    &--phone {
+      &::before {
+        right: -1px;
+        top: 33px;
+      }
+    }
+
+    &--email {
+      &::before {
+        top: 32px;
+      }
+    }
   }
 
   .reviews-form__label-radio {
@@ -384,12 +459,12 @@
     width: 650px;
     padding: 0;
     padding-top: 16px;
-    padding-left: 40px;
+    padding-left: 21px;
   }
 
   .reviews-form__button {
     width: 325px;
-    margin-top: 46px;
+    margin-top: 53px;
     margin-left: 0;
   }
 
@@ -398,7 +473,7 @@
     font-family: $font-primary;
     font-size: $font-size;
     line-height: 26px;
-    padding-top: 48px;
+    padding-top: 57px;
   }
 
   .reviews__wrapper {
@@ -456,8 +531,9 @@
       padding-bottom: 27px;
 
       .reviews-form__title {
-        padding-top: 33px;
-        padding-bottom: 71px;
+        padding-top: 39px;
+        padding-bottom: 25px;
+        padding-right: 8px;
       }
     }
 
@@ -506,8 +582,11 @@
     }
 
     &--contacts {
-      width: 50%;
       flex-wrap: nowrap;
+
+      .reviews-form__input {
+        width: 314px;
+      }
     }
 
     &--landmarks {
@@ -521,13 +600,30 @@
 
     &--phone {
       padding-left: 0;
-      padding-top: 21px;
+      padding-top: 6px;
       padding-right: 16px;
+
+      &::before {
+        top: 2px;
+        right: 1px;
+      }
     }
 
     &--email {
       padding-left: 0;
-      padding-right: 19px;
+      padding-right: 17px;
+      padding-top: 7px;
+
+      &::before {
+        top: 2px;
+        right: -3px;
+      }
+    }
+  }
+
+  .reviews-form__input {
+    &--email {
+      margin-left: 10px;
     }
   }
 
@@ -537,7 +633,7 @@
 
   .reviews-form__button {
     width: 480px;
-    margin-top: 44px;
+    margin-top: 51px;
   }
 
   .reviews__wrapper {

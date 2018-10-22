@@ -1,25 +1,42 @@
 .gallery {
   width: 100%;
-  padding-top: 10px;
+  padding-top: 12px;
   background-color: $background-color-2;
 }
 
 .gallery__item {
-  padding-bottom: 20px;
+  width: 280px;
+  margin: 0 auto;
+  margin-top: -3px;
+  padding-top: 23px;
+  padding-bottom: 18px;
+  border-top: 1px solid $input-color-hover;
+
+  &--full-width {
+    padding-top: 22px;
+
+    .gallery-item__footer {
+      margin-bottom: -3px;
+    }
+
+    .gallery__image {
+      padding-bottom: 11px;
+    }
+  }
 }
 
 .gallery__image {
   display: block;
-  padding: 20px;
-  padding-bottom: 15px;
+  padding-bottom: 9px;
 }
 
-.gallery-item__footer {
-  padding: 0 20px;
+.gallery-item__footer .button {
+  padding: 0;
 }
 
 .gallery-item__caption {
-  font-family: "PTSans_bold", "Arial", sans-serif;
+  @include font-title-mobile;
+  font-weight: 700;
   font-size: 14px;
   line-height: 24px;
 }
@@ -30,6 +47,18 @@
   line-height: 22px;
   color: $text-color_2;
   text-transform: none;
+}
+
+.gallery__button {
+  width: 23px;
+  height: 21px;
+  fill: $background-active-logo;
+}
+
+.gallery-item__counter {
+  font-weight: 700;
+  line-height: 24px;
+  padding-left: 10px;
 }
 
 @media (min-width: $tablet-width) {
@@ -48,26 +77,46 @@
   .gallery-item__footer {
     display: flex;
     justify-content: space-between;
+
     background-color: $background-color-1;
+    padding: 0 20px;
     padding-top: 15px;
     padding-bottom: 7px;
-
-    &--top {
-      margin-top: 132px;
-    }
   }
 
   .gallery__item {
+    margin: 0;
     width: 324px;
+    padding-top: 0;
     padding-bottom: 0;
-  }
+    border: none;
 
-  .gallery .gallery__item {
     &--full-width {
       width: 648px;
       margin-top: -6px;
-      padding-bottom: 0;
+      padding-bottom: 4px;
+
+      .gallery-item__footer {
+        padding: 0 20px;
+        padding-top: 148px;
+        padding-bottom: 6px;
+        align-items: center;
+      }
+
+      .gallery-item__like {
+        padding-top: 0;
+        padding-right: 1px;
+      }
     }
+  }
+
+  .gallery-item__like {
+    padding-top: 12px;
+    padding-right: 10px;
+  }
+
+  .gallery-item__counter {
+    padding-left: 4px;
   }
 }
 
@@ -86,6 +135,23 @@
   .gallery__item {
     position: relative;
     width: 400px;
+
+    &--full-width {
+      margin-top: -4px;
+      padding-bottom: 131px;
+
+      .gallery-item__author {
+        padding-bottom: 17px;
+      }
+
+      .gallery-item__info {
+        padding-right: 2px;
+      }
+
+      .gallery-item__like {
+        margin-top: -7px;
+      }
+    }
   }
 
   .gallery-item__footer {
@@ -98,7 +164,8 @@
   }
 
   .gallery-item__caption,
-  .gallery-item__author {
+  .gallery-item__author,
+  .gallery-item__counter {
     color: $background-color-1;
   }
 

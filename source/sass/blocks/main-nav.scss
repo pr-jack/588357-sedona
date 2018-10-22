@@ -1,7 +1,7 @@
 .main-nav {
+  @include font-title-mobile;
   position: relative;
-  font-family: "PTSans bold", "Arial", sans-serif;
-  font-size: 18px;
+  font-weight: 700;
   line-height: 40px;
   background: $primary-color;
 }
@@ -53,19 +53,20 @@
 
       &:active {
         background: $background-active;
+        color: $color-hover;
       }
     }
   }
 
-  .main-nav--nojs .main-nav__toggle {
+  .main-nav--nojs {
     display: none;
   }
 
   .main-nav__toggle {
+    display: block;
     position: absolute;
     top: 10px;
     right: 26px;
-    display: block;
     width: 23px;
     height: 23px;
     cursor: pointer;
@@ -77,11 +78,20 @@
       fill: #ffffff;
     }
   }
+
+  .show-on-mobile {
+    display: block;
+  }
+
+  .hide-on-mobile {
+    display: none;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .main-nav {
     @include font-title;
+    font-weight: 700;
     background: $background-color-2;
     font-size: 14px;
   }
@@ -120,9 +130,17 @@
     &:hover {
       color: $color-curent-hover;
     }
+
+    &:active {
+      color: $color-curent-active;
+    }
   }
 
   .site-list__item:nth-child(2) {
     margin-right: 20%;
+  }
+
+  .show-on-mobile {
+    display: none;
   }
 }

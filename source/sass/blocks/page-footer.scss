@@ -6,12 +6,21 @@
   flex-wrap: wrap;
   margin: 0 auto;
   padding: 0 80px;
-  padding-top: 35px;
+  padding-top: 56px;
   padding-bottom: 30px;
+}
+
+.page-footer__index {
+  padding-top: 34px;
+}
+
+.page-footer__form {
+  padding-top: 34px;
 }
 
 .page-footer__hashtag {
   @include font-title;
+  font-weight: 700;
   text-decoration: none;
   color: #000000;
 }
@@ -27,17 +36,35 @@
 }
 
 .social__item {
-  width: 45px;
-  height: 45px;
+  width: 46px;
+  height: 46px;
   background: $primary-color;
+
+  &:hover {
+    background: $background-hover;
+  }
+
+  &:active {
+    background: $background-active;
+  }
 }
 
 .social__link {
   display: block;
-  margin: 11px;
-  width: 23px;
-  height: 23px;
-  background: $social-icon-hover;
+  padding-top: 14px;
+  width: 46px;
+  height: 46px;
+  text-align: center;
+
+  &--twitter,
+  &--facebook,
+  &--youtube {
+    fill: $base-color;
+
+    &:active {
+      fill: $social-icon-active;
+    }
+  }
 }
 
 .social__list li {
@@ -50,16 +77,15 @@
 
 .copyright__text {
   line-height: 26px;
-  padding-left: 9px;
   padding-right: 11px;
 }
 
 .copyright__link {
-  &:hover path {
+  &:hover {
     fill: $primary-color;
   }
 
-  &:active path {
+  &:active {
     fill: $background-active-logo;
   }
 }
@@ -82,7 +108,7 @@
   .page-footer__social {
     margin: 0;
     padding: 0;
-    padding-left: 19px;
+    padding-left: 10px;
     margin-left: -18px;
   }
 
@@ -102,7 +128,7 @@
     justify-content: space-between;
     padding-left: 120px;
     padding-right: 120px;
-    padding-top: 32px;
+    padding-top: 30px;
     padding-bottom: 39px;
   }
 
