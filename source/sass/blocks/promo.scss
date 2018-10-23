@@ -3,7 +3,8 @@
   background-color: $background-color-2;
 
   &--main {
-    padding-bottom: 42px;
+    position: relative;
+    padding-bottom: 1px;
   }
 }
 
@@ -30,6 +31,7 @@
 
   &--main {
     line-height: 26px;
+    margin-bottom: 5px;
   }
 }
 

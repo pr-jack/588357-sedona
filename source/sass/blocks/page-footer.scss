@@ -6,7 +6,7 @@
   flex-wrap: wrap;
   margin: 0 auto;
   padding: 0 80px;
-  padding-top: 56px;
+  padding-top: 33px;
   padding-bottom: 30px;
 }
 
@@ -55,12 +55,11 @@
   width: 46px;
   height: 46px;
   text-align: center;
+  fill: $base-color;
 
   &--twitter,
   &--facebook,
   &--youtube {
-    fill: $base-color;
-
     &:active {
       fill: $social-icon-active;
     }
@@ -130,6 +129,10 @@
     padding-right: 120px;
     padding-top: 30px;
     padding-bottom: 39px;
+
+    &--index {
+      padding-top: 23px;
+    }
   }
 
   .page-footer__social {

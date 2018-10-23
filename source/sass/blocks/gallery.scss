@@ -125,20 +125,21 @@
     padding: 0;
   }
 
-  .gallery .gallery__item--full-width {
-    width: 1200px;
-    margin-top: -3px;
-    padding: 0;
-    padding-bottom: 132px;
-  }
-
   .gallery__item {
     position: relative;
     width: 400px;
 
     &--full-width {
+      position: relative;
+      width: 100%;
       margin-top: -4px;
       padding-bottom: 131px;
+
+      .gallery-item__footer {
+        position: absolute;
+        width: 100%;
+        padding-top: 14px;
+      }
 
       .gallery-item__author {
         padding-bottom: 17px;
@@ -170,6 +171,6 @@
   }
 
   .gallery__button {
-    color: $background-color-1;
+    fill: $base-color;
   }
 }

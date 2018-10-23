@@ -1,7 +1,7 @@
 .presentation {
   width: 100%;
   margin-top: -7px;
-  padding-top: 33px;
+  padding-top: 39px;
   padding-bottom: 79px;
   text-align: center;
   background-color: $background-color-2;
@@ -40,15 +40,22 @@
 }
 
 .video__controls {
-  position: absolute;
-  bottom: -60px;
-  left: 20px;
+  @include center;
+  position: relative;
+  top: -6px;
   width: 280px;
+  height: 65px;
   margin: 0 auto;
+  background-color: $input-color-1;
 }
 
 .video__controls-range {
-  position: relative;
+  @include center;
+  position: absolute;
+  width: 100%;
+  height: 45px;
+  top: -45px;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .range__field {
@@ -71,8 +78,8 @@
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  top: 20px;
-  left: 58px;
+  top: -3px;
+  left: 36px;
   background-color: #ffffff;
 }
 
@@ -85,24 +92,31 @@
   background-color: $input-color-1;
 }
 
-.option__repeat,
-.option__subtitles,
-.option__fullscreen {
-  fill: $video-controls-base;
+.video__button {
+  &--repeat,
+  &--subtitles,
+  &--fullscreen {
+    fill: $video-controls-base;
 
-  &:hover {
-    fill: $video-controls-hover;
+    &:hover {
+      fill: $video-controls-hover;
+    }
+
+    &:active {
+      fill: $video-controls-active;
+    }
   }
 
-  &:active {
-    fill: $video-controls-active;
+  &--subtitles {
+    margin-left: 121px;
+    margin-right: 18px;
   }
 }
 
 @media (min-width: $tablet-width) {
   .presentation {
     padding-top: 74px;
-    padding-bottom: 13px;
+    padding-bottom: 37px;
     border: none;
   }
 
@@ -131,12 +145,64 @@
       background-image: url("../img/video-tablet@2x.jpg");
     }
   }
+
+  .video__controls {
+    width: 100%;
+    height: 0;
+    background: none;
+  }
+
+  .video__controls-option {
+    position: absolute;
+    top: -93px;
+    width: 100%;
+    height: 93px;
+    padding: 0 28px;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .video__controls-range {
+    width: 390px;
+    top: -71px;
+    background: none;
+  }
+
+  .range__scale {
+    width: 385px;
+    top: 23px;
+    left: -33px;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .range__toggle {
+    left: 110px;
+  }
+
+  .video__button {
+    &--repeat,
+    &--subtitles,
+    &--fullscreen {
+      fill: $base-color;
+
+      &:hover {
+        fill: $video-controls-hover-2;
+      }
+
+      &:active {
+        fill: $video-controls-active-2;
+      }
+    }
+
+    &--fullscreen {
+      padding-left: 0;
+    }
+  }
 }
 
 @media (min-width: $desctop-width) {
   .presentation {
     padding-top: 76px;
-    padding-bottom: 56px;
+    padding-bottom: 78px;
   }
 
   .presentation__description {
@@ -158,5 +224,10 @@
 
   .presentation__video-wrapper {
     padding: 0 200px;
+  }
+
+  .range__scale {
+    width: 540px;
+    left: -112px;
   }
 }

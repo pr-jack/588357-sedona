@@ -11,7 +11,7 @@
 .reviews-form__group {
   margin: 0 auto;
   padding: 0 20px;
-  padding-bottom: 7px;
+  padding-bottom: 9px;
   border: none;
   line-height: 26px;
 
@@ -55,8 +55,18 @@
   }
 
   &--line {
+    position: relative;
     width: 100%;
-    border-top: 1px solid $input-color-hover;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 320px;
+      height: 1px;
+      top: -1px;
+      left: -20px;
+      background: $input-color-hover;
+    }
   }
 }
 
@@ -206,6 +216,14 @@
     border-radius: 50%;
     background: $background-color-1;
   }
+
+  &:hover::before {
+    background: $input-color-hover;
+  }
+
+  &:active::before {
+    background: $input-color-active;
+  }
 }
 
 .reviews-form__input-radio:checked + label {
@@ -219,6 +237,10 @@
     border-radius: 50%;
     background: $text-color_2;
   }
+
+  &:active::after {
+    background: $checked-color-active;
+  }
 }
 
 .reviews-form__input-checkbox + label {
@@ -231,6 +253,14 @@
     top: -14px;
     border-radius: 10%;
     background: $background-color-1;
+  }
+
+  &:hover::before {
+    background: $input-color-hover;
+  }
+
+  &:active::before {
+    background: $input-color-active;
   }
 }
 
@@ -246,6 +276,10 @@
     border-bottom: 4px solid #000000;
     background: transparent;
     transform: rotate(-45deg);
+  }
+
+  &:active::after {
+    border-color: $checked-color-active;
   }
 }
 
@@ -303,8 +337,19 @@
     padding: 0;
 
     &--name {
+      position: relative;
       text-align: left;
       padding-right: 24px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 294px;
+        top: 4px;
+        left: -39px;
+        background: $input-color-hover;
+      }
 
       .reviews-form__title {
         padding-bottom: 54px;
@@ -320,32 +365,41 @@
     }
 
     &--contacts {
-      padding: 0 61px;
+      margin: 0 61px;
       padding-bottom: 28px;
       width: 100%;
+      border-top: 1px solid $input-color-hover;
 
       .reviews-form__title {
+        width: 400px;
         padding-top: 41px;
-        padding-bottom: 24px;
+        padding-bottom: 40px;
         padding-left: 0;
       }
     }
 
     &--landmarks {
       width: 100%;
+      margin: 0 61px;
       padding-bottom: 21px;
+      border-top: 1px solid $input-color-hover;
 
       .reviews-form__title {
-        width: 290px;
-        padding-bottom: 11px;
+        width: 400px;
+        padding-bottom: 0;
         padding-left: 0;
       }
     }
 
     &--textarea {
+      margin: 0 61px;
+      border-top: 1px solid $input-color-hover;
+
       .reviews-form__title {
-        padding-bottom: 58px;
+        width: 400px;
+        padding-bottom: 0;
         padding-left: 0;
+        margin-bottom: 58px;
       }
     }
   }
@@ -357,7 +411,9 @@
     padding-left: 17px;
 
     &--line {
-      border-top: none;
+      &::before {
+        display: none;
+      }
     }
   }
 
@@ -370,7 +426,7 @@
     &--landmarks {
       @include center;
       margin: 0 auto;
-      padding-top: 45px;
+      padding-top: 56px;
       text-align: left;
     }
   }
@@ -389,11 +445,16 @@
     &--contacts {
       display: flex;
       flex-wrap: wrap;
+      margin-top: -16px;
       padding-bottom: 22px;
 
       .reviews-form__input {
         padding: 18px 20px;
       }
+    }
+
+    &--contacts:nth-of-type(2) {
+      margin-top: 0;
     }
 
     &--landmarks {
@@ -522,6 +583,10 @@
       text-align: left;
       padding-right: 16px;
 
+      &::before {
+        left: -76px;
+      }
+
       .reviews-form__title {
         padding-left: 5px;
       }
@@ -529,10 +594,11 @@
 
     &--contacts {
       padding-bottom: 27px;
+      margin: 0 121px;
 
       .reviews-form__title {
         padding-top: 39px;
-        padding-bottom: 25px;
+        padding-bottom: 35px;
         padding-right: 8px;
       }
     }
@@ -544,6 +610,8 @@
     }
 
     &--landmarks {
+      width: 962px;
+
       .reviews-form__title {
         padding-left: 2px;
       }
@@ -560,13 +628,12 @@
     &--contacts {
       @include center;
       justify-content: space-between;
-      padding: 0 62px;
-      padding-top: 47px;
+      padding-top: 49px;
     }
 
     &--landmarks {
       width: 962px;
-      padding-top: 47px;
+      padding-top: 57px;
       padding-left: 15px;
       justify-content: space-between;
     }
@@ -586,6 +653,10 @@
 
       .reviews-form__input {
         width: 314px;
+
+        &--email {
+          margin-top: -12px;
+        }
       }
     }
 
@@ -604,7 +675,8 @@
       padding-right: 16px;
 
       &::before {
-        top: 2px;
+        height: 62px;
+        top: 0;
         right: 1px;
       }
     }
@@ -612,11 +684,12 @@
     &--email {
       padding-left: 0;
       padding-right: 17px;
-      padding-top: 7px;
+      margin-top: -5px;
 
       &::before {
-        top: 2px;
-        right: -3px;
+        height: 62px;
+        top: -12px;
+        right: 1px;
       }
     }
   }
