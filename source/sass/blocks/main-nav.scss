@@ -12,12 +12,6 @@
 }
 
 @media (max-width: $mobile-width-only) {
-  .main-nav {
-    &--closed {
-      display: none;
-    }
-  }
-
   .no-js {
     .main-nav {
       display: block;
@@ -114,6 +108,10 @@
       .page-header__burger {
         display: none;
       }
+    }
+
+    &--closed {
+      display: none;
     }
   }
 

@@ -318,9 +318,7 @@
   background: $input-color-1;
   outline: none;
   border: none;
-}
 
-.reviews-form__textarea {
   &::placeholder {
     color: #000000;
   }
@@ -556,7 +554,6 @@
   }
 
   .reviews-form__input {
-
     &--name {
       width: 216px;
     }
@@ -564,7 +561,6 @@
 
   .reviews-form__textarea {
     width: 650px;
-    padding: 0;
     padding: 16px 21px;
   }
 
@@ -628,6 +624,7 @@
 
   .reviews-form__group {
     margin: 0;
+
     &--name {
       width: 480px;
       text-align: left;
