@@ -1,8 +1,7 @@
 .presentation {
   width: 100%;
-  margin-top: -7px;
-  padding-top: 39px;
-  padding-bottom: 79px;
+  padding-top: 31px;
+  padding-bottom: 71px;
   text-align: center;
   background-color: $background-color-2;
   border-top: 1px solid $input-color-hover;
@@ -53,6 +52,7 @@
   @include center;
   position: absolute;
   width: 100%;
+  padding: 0 22px;
   height: 45px;
   top: -45px;
   background-color: rgba(0, 0, 0, 0.3);
@@ -65,12 +65,11 @@
 }
 
 .range__scale {
-  position: absolute;
-  width: 235px;
-  height: 4px;
-  top: 22px;
-  left: 22px;
-  background-color: rgba(242, 242, 242, 0.3);
+  position: relative;
+  padding: 0 118px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: 10;
 }
 
 .range__toggle {
@@ -85,10 +84,11 @@
 
 .video__controls-option {
   @include center;
+  width: 100%;
   justify-content: space-between;
   height: 66px;
-  padding: 0 17px;
-  padding-top: 4px;
+  padding: 0 5px;
+  padding-top: 20px;
   background-color: $input-color-1;
 }
 
@@ -107,15 +107,22 @@
     }
   }
 
+  &--repeat {
+    padding-left: 19px;
+  }
+
   &--subtitles {
-    margin-left: 121px;
-    margin-right: 18px;
+    margin-left: 97px;
+  }
+
+  &--fullscreen {
+    margin-left: 10px;
   }
 }
 
 @media (min-width: $tablet-width) {
   .presentation {
-    padding-top: 74px;
+    padding-top: 66px;
     padding-bottom: 37px;
     border: none;
   }
@@ -162,16 +169,15 @@
   }
 
   .video__controls-range {
-    width: 390px;
+    padding: 0 22px;
+    left: -37px;
     top: -71px;
     background: none;
   }
 
   .range__scale {
-    width: 385px;
-    top: 23px;
-    left: -33px;
     background-color: rgba(255, 255, 255, 0.6);
+    padding: 0 194px;
   }
 
   .range__toggle {
@@ -193,16 +199,27 @@
       }
     }
 
+    &--repeat {
+      padding-top: 18px;
+      padding-left: 8px;
+    }
+
+    &--subtitles {
+      margin-left: 433px;
+      padding-top: 19px;
+    }
+
     &--fullscreen {
-      padding-left: 0;
+      padding-right: 0;
+      padding-top: 19px;
     }
   }
 }
 
 @media (min-width: $desctop-width) {
   .presentation {
-    padding-top: 76px;
-    padding-bottom: 78px;
+    padding-top: 71px;
+    padding-bottom: 14px;
   }
 
   .presentation__description {
@@ -226,8 +243,13 @@
     padding: 0 200px;
   }
 
+  .video__button {
+    &--subtitles {
+      margin-left: 584px;
+    }
+  }
+
   .range__scale {
-    width: 540px;
-    left: -112px;
+    padding: 0 270px;
   }
 }

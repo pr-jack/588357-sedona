@@ -1,24 +1,20 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="no-js" lang="ru">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <script>
-      'use strict';
-      var navMain = document.querySelector('.main-nav');
-      navMain.classList.remove('main-nav--nojs');
-    </script>
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="picturefill.js" async></script>
+    <script>
+      document.documentElement.removeAttribute('class');
+    </script>
   </head>
   <body>
-    <div style="display:none">
-      <include src="build/img/sprite.svg"></include>
-    </div>
 
     <div class="page-wrapper">
       <header class="page-header">
-        <nav class="main-nav main-nav--closed main-nav--nojs">
+        <nav class="main-nav main-nav--closed">
           <button class="main-nav__toggle" type="button">
             <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199" enable-background="new 0 0 22.199 22.199" xml:space="preserve">
             <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 "/>
@@ -41,7 +37,7 @@
             </ul>
         </nav>
         <div class="page-header__top">
-          <a class="page-header__logo">
+          <a class="page-header__logo" href="index.html">
             <picture>
               <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
               <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
@@ -91,7 +87,7 @@
                 </ul>
             </fieldset>
             <fieldset class="reviews-form__group reviews-form__group--contacts">
-              <legend class="reviews-form__title reviews-form__title--line">Контактная информация</legend>
+              <legend class="reviews-form__title reviews-form__title--line">Контактная информация:</legend>
                 <ul class="reviews-form__list reviews-form__list--contacts">
                   <li class="reviews-form__item reviews-form__item--contacts">
                     <label class="reviews-form__label reviews-form__label--phone" for="user-phone"><span class="desctop-hidden">Контактный</span>телефон*:</label>
@@ -163,7 +159,7 @@
               <a class="social__link social__link--twitter" href="#">
                 <span class="visually-hidden">Мы в твиттере</span>
                 <svg width="18" height="14">
-                  <use xlink:href="#icon-twitter"></use>
+                  <use xlink:href="img/sprite.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
@@ -171,7 +167,7 @@
               <a class="social__link social__link--facebook" href="#">
                 <span class="visually-hidden">Мы на фэйсбук</span>
                 <svg width="9" height="18">
-                  <use xlink:href="#icon-facebook"></use>
+                  <use xlink:href="img/sprite.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
@@ -179,7 +175,7 @@
               <a class="social__link social__link--youtube" href="#">
                 <span class="visually-hidden">Мы на youtube</span>
                 <svg width="20" height="14">
-                  <use xlink:href="#icon-youtube"></use>
+                  <use xlink:href="img/sprite.svg#icon-youtube"></use>
                 </svg>
               </a>
             </li>
@@ -189,7 +185,7 @@
           <b class="copyright__text">Разработано</b>
           <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <svg width="27" height="34">
-              <use xlink:href="#icon-logo-htmlacademy"></use>
+              <use xlink:href="img/sprite.svg#icon-logo-htmlacademy"></use>
             </svg>
           </a>
         </div>
@@ -212,5 +208,6 @@
       </section>
       <script src="js/script.js"></script>
       <script src="js/svg4everybody.js"></script>
+      <script>svg4everybody();</script>
   </body>
 </html>

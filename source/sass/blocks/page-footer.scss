@@ -6,12 +6,11 @@
   flex-wrap: wrap;
   margin: 0 auto;
   padding: 0 80px;
-  padding-top: 33px;
   padding-bottom: 30px;
-}
 
-.page-footer__index {
-  padding-top: 34px;
+  &--index {
+    padding-top: 34px;
+  }
 }
 
 .page-footer__form {
@@ -127,7 +126,7 @@
     justify-content: space-between;
     padding-left: 120px;
     padding-right: 120px;
-    padding-top: 30px;
+    padding-top: 94px;
     padding-bottom: 39px;
 
     &--index {
