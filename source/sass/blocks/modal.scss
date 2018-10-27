@@ -39,6 +39,15 @@
   &--success {
     width: 280px;
   }
+
+  &:hover {
+    background: $background-hover;
+  }
+
+  &:active {
+    background: $background-active;
+    color: $color-hover;
+  }
 }
 
 @media (min-width: $tablet-width) {
