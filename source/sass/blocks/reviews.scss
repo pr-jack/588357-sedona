@@ -1,5 +1,6 @@
 .reviews {
   padding-bottom: 72px;
+  overflow: hidden;
   background-color: $background-color-2;
 }
 
@@ -467,7 +468,7 @@
   .reviews-form__list {
     &--impression {
       @include center;
-      justify-content: none;
+      justify-content: normal;
       padding-top: 21px;
     }
 
@@ -644,7 +645,7 @@
 
       .reviews-form__title {
         padding-top: 32px;
-        padding-bottom: 10px;
+        padding-bottom: 28px;
         padding-right: 8px;
       }
     }
@@ -682,7 +683,7 @@
     &--contacts {
       @include center;
       justify-content: space-between;
-      padding-top: 37px;
+      padding-top: 19px;
 
       li:nth-of-type(1) {
         &::before {
@@ -717,7 +718,7 @@
     }
 
     &--impression {
-      padding-left: 68px;
+      padding-left: 0;
     }
 
     &--contacts {
@@ -756,6 +757,23 @@
       width: 238px;
       padding-left: 0;
       padding-bottom: 0;
+    }
+  }
+
+  .reviews-form__label-radio {
+    padding-left: 80px;
+  }
+
+  .reviews-form__input-radio + label {
+    &::before {
+      left: 4px;
+    }
+  }
+
+  .reviews-form__input-radio:checked + label {
+    &::after {
+
+      left: 22px;
     }
   }
 

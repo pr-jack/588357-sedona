@@ -5,9 +5,8 @@
 }
 
 .gallery__item {
-  width: 280px;
-  margin: 0 auto;
   margin-top: -3px;
+  padding: 0 20px;
   padding-top: 23px;
   padding-bottom: 18px;
   border-top: 1px solid $input-color-hover;
@@ -87,8 +86,7 @@
   .gallery__item {
     margin: 0;
     width: 324px;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0;
     border: none;
 
     &--full-width {
