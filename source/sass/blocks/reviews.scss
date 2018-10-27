@@ -21,6 +21,7 @@
 
     .reviews-form__title {
       padding-top: 17px;
+      text-align: center;
     }
   }
 
@@ -33,6 +34,7 @@
 
     .reviews-form__title {
       padding-bottom: 33px;
+      text-align: center;
     }
   }
 }
@@ -197,6 +199,7 @@
   background: $input-color-1;
   border: none;
   text-transform: none;
+  overflow: hidden;
 
   &:hover {
     background: $input-color-hover;
@@ -380,7 +383,8 @@
 
     &--name {
       position: relative;
-      width: 272px;
+      width: 267px;
+      margin: 0;
       text-align: left;
 
       .reviews-form__title {
@@ -456,7 +460,7 @@
     font-size: 21px;
     padding: 0;
     padding-bottom: 50px;
-    padding-left: 17px;
+    padding-left: 0;
 
     &--line {
       &::before {
@@ -537,8 +541,6 @@
   }
 
   .reviews-form__label {
-    padding-left: 20px;
-
     &--phone,
     &--email {
       padding-left: 20px;
