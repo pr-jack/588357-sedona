@@ -12,12 +12,9 @@
 }
 
 @media (max-width: $mobile-width-only) {
-  .main-nav--closed {
-    display: none;
-  }
-
-  .main-nav--opened {
+  .no-js {
     .main-nav {
+      display: block;
       position: relative;
       font-family: "PTSans bold", "Arial", sans-serif;
       font-size: 18px;
@@ -30,6 +27,10 @@
       margin: 0 auto;
       width: 100%;
       text-align: center;
+    }
+
+    .main-nav__toggle {
+      display: none;
     }
 
     .site-list__item a:nth-of-type(1) {
@@ -56,10 +57,62 @@
         color: $color-hover;
       }
     }
+
+    .page-header__burger {
+      display: none;
+    }
   }
 
-  .main-nav--nojs {
-    display: none;
+  .main-nav {
+    &--opened {
+      .main-nav {
+        position: relative;
+        font-family: "PTSans bold", "Arial", sans-serif;
+        font-size: 18px;
+        line-height: 40px;
+        background: $primary-color;
+      }
+
+      .main-nav__list {
+        @include list;
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+      }
+
+      .main-nav__list li:nth-child(1) {
+        border-bottom: 1px solid rgba(1, 1, 1, 0.2);
+        border-top: none;
+      }
+
+      .main-nav__list li {
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 1px solid rgba(1, 1, 1, 0.2);
+      }
+
+      .main-nav__list a {
+        display: block;
+        padding: 7px 0;
+        color: #ffffff;
+
+        &:hover {
+          background: $background-hover;
+        }
+
+        &:active {
+          background: $background-active;
+          color: $color-hover;
+        }
+      }
+
+      .page-header__burger {
+        display: none;
+      }
+    }
+
+    &--closed {
+      display: none;
+    }
   }
 
   .main-nav__toggle {

@@ -1,8 +1,7 @@
 .presentation {
   width: 100%;
-  margin-top: -7px;
-  padding-top: 33px;
-  padding-bottom: 79px;
+  padding-top: 31px;
+  padding-bottom: 71px;
   text-align: center;
   background-color: $background-color-2;
   border-top: 1px solid $input-color-hover;
@@ -40,15 +39,23 @@
 }
 
 .video__controls {
-  position: absolute;
-  bottom: -60px;
-  left: 20px;
+  @include center;
+  position: relative;
+  top: -6px;
   width: 280px;
+  height: 65px;
   margin: 0 auto;
+  background-color: $input-color-1;
 }
 
 .video__controls-range {
-  position: relative;
+  @include center;
+  position: absolute;
+  width: 100%;
+  padding: 0 22px;
+  height: 45px;
+  top: -45px;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .range__field {
@@ -58,12 +65,11 @@
 }
 
 .range__scale {
-  position: absolute;
-  width: 235px;
-  height: 4px;
-  top: 22px;
-  left: 22px;
-  background-color: rgba(242, 242, 242, 0.3);
+  position: relative;
+  padding: 0 118px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: 10;
 }
 
 .range__toggle {
@@ -71,38 +77,54 @@
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  top: 20px;
-  left: 58px;
+  top: -3px;
+  left: 36px;
   background-color: #ffffff;
 }
 
 .video__controls-option {
   @include center;
+  width: 100%;
   justify-content: space-between;
   height: 66px;
-  padding: 0 17px;
-  padding-top: 4px;
+  padding: 0 5px;
+  padding-top: 20px;
+  padding-left: 0;
   background-color: $input-color-1;
 }
 
-.option__repeat,
-.option__subtitles,
-.option__fullscreen {
-  fill: $video-controls-base;
+.video__button {
+  &--repeat,
+  &--subtitles,
+  &--fullscreen {
+    fill: $video-controls-base;
 
-  &:hover {
-    fill: $video-controls-hover;
+    &:hover {
+      fill: $video-controls-hover;
+    }
+
+    &:active {
+      fill: $video-controls-active;
+    }
   }
 
-  &:active {
-    fill: $video-controls-active;
+  &--repeat {
+    padding-left: 19px;
+  }
+
+  &--subtitles {
+    margin-left: 97px;
+  }
+
+  &--fullscreen {
+    margin-left: 10px;
   }
 }
 
 @media (min-width: $tablet-width) {
   .presentation {
-    padding-top: 74px;
-    padding-bottom: 13px;
+    padding-top: 66px;
+    padding-bottom: 37px;
     border: none;
   }
 
@@ -131,12 +153,74 @@
       background-image: url("../img/video-tablet@2x.jpg");
     }
   }
+
+  .video__controls {
+    width: 100%;
+    height: 0;
+    background: none;
+  }
+
+  .video__controls-option {
+    position: absolute;
+    top: -93px;
+    width: 100%;
+    height: 93px;
+    padding: 0 28px;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .video__controls-range {
+    padding: 0 22px;
+    left: -37px;
+    top: -71px;
+    background: none;
+  }
+
+  .range__scale {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 0 194px;
+  }
+
+  .range__toggle {
+    left: 110px;
+  }
+
+  .video__button {
+    &--repeat,
+    &--subtitles,
+    &--fullscreen {
+      fill: $base-color;
+
+      &:hover {
+        fill: $video-controls-hover-2;
+      }
+
+      &:active {
+        fill: $video-controls-active-2;
+      }
+    }
+
+    &--repeat {
+      padding-top: 18px;
+      padding-left: 8px;
+    }
+
+    &--subtitles {
+      margin-left: 433px;
+      padding-top: 19px;
+    }
+
+    &--fullscreen {
+      padding-right: 0;
+      padding-top: 19px;
+    }
+  }
 }
 
 @media (min-width: $desctop-width) {
   .presentation {
-    padding-top: 76px;
-    padding-bottom: 56px;
+    padding-top: 71px;
+    padding-bottom: 14px;
   }
 
   .presentation__description {
@@ -158,5 +242,15 @@
 
   .presentation__video-wrapper {
     padding: 0 200px;
+  }
+
+  .video__button {
+    &--subtitles {
+      margin-left: 584px;
+    }
+  }
+
+  .range__scale {
+    padding: 0 270px;
   }
 }
