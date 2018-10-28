@@ -64,10 +64,11 @@
     &::before {
       position: absolute;
       content: "";
-      width: 320px;
+      width: 100vw;
       height: 1px;
-      top: -1px;
-      left: -20px;
+      top: 0;
+      left: 50%;
+      margin-left: -50vw;
       background: $input-color-hover;
     }
   }
@@ -134,16 +135,15 @@
   }
 
   &--impression {
-    display: flex;
+    display: block;
     justify-content: space-between;
-    align-items: center;
+    text-align: left;
     padding-bottom: 43px;
   }
 
   &--landmarks {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: block;
+    text-align: left;
     text-transform: none;
     padding-bottom: 54px;
   }
@@ -439,6 +439,7 @@
           top: 0;
           left: 0;
           flex-grow: 1;
+          margin-left: 0;
           background: $input-color-hover;
           display: inline-block;
         }
@@ -474,6 +475,7 @@
           top: 0;
           left: 0;
           flex-grow: 1;
+          margin-left: 0;
           background: $input-color-hover;
           display: inline-block;
         }
@@ -507,6 +509,7 @@
           top: 0;
           left: 0;
           flex-grow: 1;
+          margin-left: 0;
           background: $input-color-hover;
           display: inline-block;
         }
@@ -527,6 +530,12 @@
     padding: 0;
     padding-bottom: 50px;
     padding-left: 0;
+
+    &--line {
+      &::before {
+        width: 0;
+      }
+    }
   }
 
   .reviews-form__list {

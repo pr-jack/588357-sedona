@@ -16,4 +16,5 @@ var headerBurger = document.querySelector('.page-header__burger');
 
     navMain.classList.remove('main-nav--opened');
     navMain.classList.add('main-nav--closed');
+    headerBurger.classList.remove('page-header__burger--hidden');
   });

@@ -16,6 +16,10 @@
     position: absolute;
     top: 15px;
     right: 26px;
+
+    &--hidden {
+      display: none;
+    }
   }
 
   .page-header__button {
