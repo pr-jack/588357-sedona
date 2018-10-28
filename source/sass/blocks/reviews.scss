@@ -395,7 +395,7 @@
     &--impression {
       position: relative;
       width: 50%;
-      margin-bottom: 17px;
+      margin-bottom: 34px;
       margin-left: 7px;
       order: -1;
 
@@ -404,8 +404,8 @@
         content: "";
         width: 1px;
         height: 292px;
-        top: 4px;
-        left: 316px;
+        bottom: 36px;
+        right: 7px;
         background: $input-color-hover;
       }
 
@@ -418,40 +418,106 @@
     }
 
     &--contacts {
+      position: relative;
       padding-bottom: 28px;
       width: 100%;
-      border-top: 1px solid $input-color-hover;
 
       .reviews-form__title {
-        width: 400px;
-        margin: -13px auto 24px;
+        display: flex;
+        align-items: center;
+        margin: 0 auto 24px;
         padding-bottom: 0;
         padding-left: 0;
+        padding-top: 0;
+
+        &::before,
+        &::after {
+          position: inherit;
+          content: "";
+          width: 100px;
+          height: 1px;
+          top: 0;
+          left: 0;
+          flex-grow: 1;
+          background: $input-color-hover;
+          display: inline-block;
+        }
+
+        &::before {
+          margin-right: 60px;
+        }
+
+        &::after {
+          margin-left: 60px;
+        }
       }
     }
 
     &--landmarks {
+      position: relative;
       width: 100%;
       padding-bottom: 21px;
-      border-top: 1px solid $input-color-hover;
 
       .reviews-form__title {
-        width: 400px;
-        margin: -13px auto 24px;
+        display: flex;
+        align-items: center;
+        margin: 0 auto 24px;
         padding-bottom: 0;
         padding-left: 0;
+
+        &::before,
+        &::after {
+          position: inherit;
+          content: "";
+          width: 150px;
+          height: 1px;
+          top: 0;
+          left: 0;
+          flex-grow: 1;
+          background: $input-color-hover;
+          display: inline-block;
+        }
+
+        &::before {
+          margin-right: 25px;
+        }
+
+        &::after {
+          margin-left: 25px;
+        }
       }
     }
 
     &--textarea {
-      margin: 0 61px;
-      border-top: 1px solid $input-color-hover;
+      position: relative;
 
       .reviews-form__title {
-        width: 400px;
+        display: flex;
+        align-items: center;
         padding-bottom: 0;
         padding-left: 0;
         margin-bottom: 58px;
+
+        &::before,
+        &::after {
+          position: inherit;
+          content: "";
+          width: 100px;
+          height: 1px;
+          top: 0;
+          left: 0;
+          flex-grow: 1;
+          background: $input-color-hover;
+          display: inline-block;
+        }
+
+        &::before {
+          margin-right: 75px;
+        }
+
+        &::after {
+          margin-left: 75px;
+        }
       }
     }
   }
@@ -461,12 +527,6 @@
     padding: 0;
     padding-bottom: 50px;
     padding-left: 0;
-
-    &--line {
-      &::before {
-        display: none;
-      }
-    }
   }
 
   .reviews-form__list {
@@ -516,6 +576,7 @@
     &--contacts {
       display: flex;
       flex-wrap: wrap;
+      justify-content: flex-start;
       margin-bottom: 11px;
 
       .reviews-form__input {
@@ -670,7 +731,18 @@
       padding-bottom: 22px;
 
       .reviews-form__title {
-        padding-left: 2px;
+        &::before,
+        &::after {
+          width: 300px;
+        }
+
+        &::before {
+          margin-right: 0;
+        }
+
+        &::after {
+          margin-left: 0;
+        }
       }
     }
 

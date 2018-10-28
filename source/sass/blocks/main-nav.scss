@@ -57,10 +57,6 @@
         color: $color-hover;
       }
     }
-
-    .page-header__burger {
-      display: none;
-    }
   }
 
   .main-nav {
@@ -104,10 +100,6 @@
           color: $color-hover;
         }
       }
-
-      .page-header__burger {
-        display: none;
-      }
     }
 
     &--closed {
@@ -129,6 +121,12 @@
 
     polygon {
       fill: #ffffff;
+    }
+  }
+
+  .page-header__burger {
+    &--hiden {
+      display: none;
     }
   }
 

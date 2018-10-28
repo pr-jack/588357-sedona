@@ -16,7 +16,7 @@
       <header class="page-header">
         <nav class="main-nav main-nav--closed">
           <button class="main-nav__toggle" type="button">
-            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199" enable-background="new 0 0 22.199 22.199" xml:space="preserve">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199" enable-background="new 0 0 22.199 22.199" xml:space="preserve">
             <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 "/>
             </svg>
             <span class="visually-hidden">Открыть меню</span>
@@ -74,24 +74,24 @@
                 <ul class="reviews-form__list">
                   <li class="reviews-form__item reviews-form__item--name">
                     <label class="reviews-form__label" for="user-name">Имя*:</label>
-                    <input class="reviews-form__item--name reviews-form__input" id="user-name" type="text" name="username" placeholder="Петр" required>
+                    <input class="reviews-form__item reviews-form__item--name reviews-form__input" id="user-name" type="text" name="username" placeholder="Петр" required>
                   </li>
                   <li class="reviews-form__item reviews-form__item--name">
                     <label class="reviews-form__label" for="user-surname">Фамилия*:</label>
-                    <input class="reviews-form__item--name reviews-form__input" id="user-surname" type="text" name="usersurname" placeholder="Иванов" required>
+                    <input class="reviews-form__item reviews-form__item--name reviews-form__input" id="user-surname" type="text" name="usersurname" placeholder="Иванов" required>
                   </li>
                   <li class="reviews-form__item reviews-form__item--name">
                     <label class="reviews-form__label" for="user-patronymic">Отчество:</label>
-                    <input class="reviews-form__item--name reviews-form__input" id="user-patronymic" type="text" name="userpatronymic" placeholder="Александрович">
+                    <input class="reviews-form__item reviews-form__item--name reviews-form__input" id="user-patronymic" type="text" name="userpatronymic" placeholder="Александрович">
                   </li>
                 </ul>
             </fieldset>
             <fieldset class="reviews-form__group reviews-form__group--contacts">
-              <legend class="reviews-form__title reviews-form__title--line">Контактная информация:</legend>
+              <h2 class="reviews-form__title reviews-form__title--line">Контактная информация:</h2>
                 <ul class="reviews-form__list reviews-form__list--contacts">
                   <li class="reviews-form__item reviews-form__item--contacts">
                     <label class="reviews-form__label reviews-form__label--phone" for="user-phone"><span class="desctop-hidden">Контактный</span>телефон*:</label>
-                    <input class="reviews-form__input" id="user-phone" type="tel" pattern="[0-9]{6, 11}" name="userphone" placeholder="Введите телефон" required>
+                    <input class="reviews-form__input" id="user-phone" type="tel" pattern="[0-9]{3}-[0-9]{5}" name="userphone" placeholder="Введите телефон" required>
                   </li>
                   <li class="reviews-form__item reviews-form__item--contacts">
                     <label class="reviews-form__label reviews-form__label--email" for="user-email">Электронная почта*:</label>
@@ -117,7 +117,7 @@
                 </ul>
             </fieldset>
             <fieldset class="reviews-form__group reviews-form__group--landmarks">
-              <legend class="reviews-form__title reviews-form__title--line">Посещенные достопримечательности:</legend>
+              <h2 class="reviews-form__title reviews-form__title--line">Посещенные достопримечательности:</h2>
                 <ul class="reviews-form__list reviews-form__list--landmarks">
                   <li class="reviews-form__item reviews-form__item--landmarks">
                     <input class="reviews-form__input-checkbox visually-hidden" type="checkbox" name="landmarks" value="bridge" id="bridge" checked>
@@ -138,7 +138,7 @@
                 </ul>
             </fieldset>
             <fieldset class="reviews-form__group reviews-form__group--textarea">
-              <legend class="reviews-form__title reviews-form__title--line">Опишите свои эмоции:</legend>
+              <h2 class="reviews-form__title reviews-form__title--line">Опишите свои эмоции:</h2>
               <textarea class="reviews-form__textarea" id="user-text" name="text" placeholder="Опишите подробно все свои восторги"></textarea>
             </fieldset>
             <div class="reviews__wrapper">
