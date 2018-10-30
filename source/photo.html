@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="/fonts/ptsans.woff2" as="font">
+    <link rel="preload" href="/fonts/ptsansbold.woff2" as="font">
     <script src="js/picturefill.js" async></script>
     <script>
       document.documentElement.removeAttribute('class');
@@ -23,16 +25,16 @@
           </button>
             <ul class="main-nav__list site-list">
               <li class="site-list__item">
-                <a href="index.html">Главная</a>
+                <a class="site-list__link" href="index.html">Главная</a>
               </li>
               <li class="site-list__item site-list__item--active">
-                <a>Фото и видео</a>
+                <a class="site-list__link">Фото и видео</a>
               </li>
               <li class="site-list__item">
-                <a href="form.html">Форма отзыва</a>
+                <a class="site-list__link" href="form.html">Форма отзыва</a>
               </li>
               <li class="site-list__item">
-                <a href="#">Html Academy</a>
+                <a class="site-list__link" href="#">Html Academy</a>
               </li>
             </ul>
         </nav>
@@ -217,12 +219,12 @@
         </section>
       </main>
 
-      <footer class="page-footer">
+      <footer class="page-footer page-footer--index">
         <a class="page-footer__hashtag" href="#">#Visitsedona</a>
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--twitter" href="#">
+              <a class="social__link social__link--twitter" href="#" aria-label="Мы в твиттере">
                 <span class="visually-hidden">Мы в твиттере</span>
                 <svg width="18" height="14">
                   <use xlink:href="img/sprite.svg#icon-twitter"></use>
@@ -230,7 +232,7 @@
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="#">
+              <a class="social__link social__link--facebook" href="#" aria-label="Мы на фэйсбук">
                 <span class="visually-hidden">Мы на фэйсбук</span>
                 <svg width="9" height="18">
                   <use xlink:href="img/sprite.svg#icon-facebook"></use>
@@ -238,7 +240,7 @@
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--youtube" href="#">
+              <a class="social__link social__link--youtube" href="#" aria-label="Мы на youtube">
                 <span class="visually-hidden">Мы на youtube</span>
                 <svg width="20" height="14">
                   <use xlink:href="img/sprite.svg#icon-youtube"></use>
@@ -249,8 +251,8 @@
         </div>
         <div class="page-footer__copyright copyright">
           <b class="copyright__text">Разработано</b>
-          <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <svg width="27" height="34">
+          <a class="button" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Htmlacademy">
+            <svg class="copyright__link" width="27" height="34">
               <use xlink:href="img/sprite.svg#icon-logo-htmlacademy"></use>
             </svg>
           </a>
