@@ -1,5 +1,5 @@
 .reviews {
-  padding-bottom: 72px;
+  padding-bottom: 38px;
   overflow: hidden;
   background-color: $background-color-2;
 }
@@ -201,7 +201,8 @@
   text-transform: none;
   overflow: hidden;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background: $input-color-hover;
   }
 
@@ -244,7 +245,8 @@
     background: $background-color-1;
   }
 
-  &:hover::before {
+  &:hover::before,
+  &:focus::before {
     background: $input-color-hover;
   }
 
@@ -282,7 +284,8 @@
     background: $background-color-1;
   }
 
-  &:hover::before {
+  &:hover::before,
+  &:focus::before {
     background: $input-color-hover;
   }
 
@@ -351,7 +354,8 @@
   background: $primary-color;
   color: #ffffff;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background: $background-hover;
   }
 
@@ -693,6 +697,7 @@
 
   .reviews {
     padding: 0 120px;
+    padding-bottom: 71px;
   }
 
   .reviews-form__group {

@@ -1,7 +1,7 @@
 .intro {
   position: relative;
   width: 100%;
-  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background: #dbe9f2 url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: bottom;
 
@@ -15,7 +15,7 @@
   }
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/bg-back-mobile@2x.jpg");
+    background: #dbe9f2 url("../img/bg-back-mobile@2x.jpg");
   }
 }
 
@@ -55,7 +55,7 @@
 @media (min-width: $tablet-width) {
   .intro {
     position: relative;
-    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background: #dbe9f2 url("../img/bg-back-tablet@1x.jpg");
 
     &::after {
       position: absolute;
@@ -67,7 +67,7 @@
     }
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-back-tablet@2x.jpg");
+      background: #dbe9f2 url("../img/bg-back-tablet@2x.jpg");
     }
   }
 
@@ -97,7 +97,7 @@
 @media (min-width: $desctop-width) {
   .intro {
     position: relative;
-    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background: #dbe9f2 url("../img/bg-back-desktop@1x.jpg");
 
     &::after {
       position: absolute;
@@ -109,7 +109,7 @@
     }
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-back-desktop@2x.jpg");
+      background: #dbe9f2 url("../img/bg-back-desktop@2x.jpg");
     }
   }
 

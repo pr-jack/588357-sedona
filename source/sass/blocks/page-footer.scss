@@ -39,7 +39,8 @@
   height: 46px;
   background: $primary-color;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background: $background-hover;
   }
 
@@ -79,7 +80,8 @@
 }
 
 .copyright__link {
-  &:hover {
+  &:hover,
+  &:focus {
     fill: $primary-color;
   }
 

@@ -1,7 +1,7 @@
 .presentation {
   width: 100%;
   padding-top: 31px;
-  padding-bottom: 71px;
+  padding-bottom: 37px;
   text-align: center;
   background-color: $background-color-2;
   border-top: 1px solid $input-color-hover;
@@ -30,11 +30,11 @@
 .presentation__video-player {
   width: 100%;
   height: 201px;
-  background-image: url("../img/video-mobile@1x.jpg");
+  background: #ae978e url("../img/video-mobile@1x.jpg");
   background-repeat: no-repeat;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/video-mobile@2x.jpg");
+    background: #ae978e url("../img/video-mobile@2x.jpg");
   }
 }
 
@@ -100,7 +100,8 @@
   &--fullscreen {
     fill: $video-controls-base;
 
-    &:hover {
+    &:hover,
+    &:focus {
       fill: $video-controls-hover;
     }
 
@@ -110,7 +111,7 @@
   }
 
   &--repeat {
-    padding-left: 19px;
+    padding-left: 24px;
   }
 
   &--subtitles {
@@ -147,11 +148,11 @@
 
   .presentation__video-player {
     height: 500px;
-    background-image: url("../img/video-tablet@1x.jpg");
+    background: #ae978e url("../img/video-tablet@1x.jpg");
     background-repeat: no-repeat;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/video-tablet@2x.jpg");
+      background: #ae978e url("../img/video-tablet@2x.jpg");
     }
   }
 
@@ -192,7 +193,8 @@
     &--fullscreen {
       fill: $base-color;
 
-      &:hover {
+      &:hover,
+      &:focus {
         fill: $video-controls-hover-2;
       }
 
@@ -221,7 +223,7 @@
 @media (min-width: $desctop-width) {
   .presentation {
     padding-top: 71px;
-    padding-bottom: 14px;
+    padding-bottom: 84px;
   }
 
   .presentation__description {
@@ -233,11 +235,11 @@
 
   .presentation__video-player {
     height: 500px;
-    background-image: url("../img/video-desktop@1x.jpg");
+    background: #ae978e url("../img/video-desktop@1x.jpg");
     background-repeat: no-repeat;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/video-desktop@2x.jpg");
+      background: #ae978e url("../img/video-desktop@2x.jpg");
     }
   }
 
