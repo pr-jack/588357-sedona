@@ -35,7 +35,8 @@
   color: #ffffff;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background: $background-hover;
   }
 

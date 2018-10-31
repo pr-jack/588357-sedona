@@ -52,6 +52,10 @@
   width: 23px;
   height: 21px;
   fill: $background-active-logo;
+
+  &:focus {
+    outline: 1px solid #ffffff;
+  }
 }
 
 .gallery-item__counter {
